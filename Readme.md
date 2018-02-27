@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Сергей Кулеш](https://up.htmlacademy.ru/htmlcss/20/user/527731).
-* Наставник: `Неизвестно`.
+* Наставник: [Сергей Рубец](https://htmlacademy.ru/profile/amator).
 
 ---
 
