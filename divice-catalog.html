@@ -7,19 +7,17 @@
   <body>
     <header class="page-header">
       <input class="page-header__search" type="text" placeholder="Поиск по сайту">
+      <img class="page-header__logo logo" src="http://placehold.it/164x36" width="164" height="36">
       <nav class="main-nav">
-        <a href="">
-          <img class="main-nav__logo logo" src="http://placehold.it/164x36" width="164" height="36">
-        </a>
         <ul class="main-nav__user-nav user-nav">
           <li class="user-nav__item">
-            <button class="user-nav__button">Войти</button>
+            <a class="user-nav__link" href="">Войти</a>
           </li>
           <li class="user-nav__item">
-            <button class="user-nav__button">Сравнить</button>
+            <a class="user-nav__link" href="">Сравнить</a>
           </li>
           <li class="user-nav__item">
-            <button class="user-nav__button">Корзина</button>
+            <a class="user-nav__link" href="">Корзина</a>
           </li>
         </ul>
         <ul class="main-nav__list site-list">
@@ -98,7 +96,7 @@
                 <label class="filter__label" for="btn-bluetooth-2">Нет</label>
               </p>
             </fieldset>
-            <button class="filter__button" type="">Показать</button>
+            <button class="filter__button" type="submit">Показать</button>
           </form>
         </div>
         <div class="catalog__goods goods">
@@ -125,8 +123,8 @@
                 <h4 class="goods__caption">Любительская селфи-палка</h4>
                 <span class="goods__span">500 руб.</span>
                 <div class="goods__hover">
-                  <button class="goods__button">В корзину</button>
-                  <button class="goods__button-compare">Добавить к сравнению</button>
+                  <a class="goods__link-incart" href="">В корзину</a>
+                  <a class="goods__link-compare" href="">Добавить к сравнению</a>
                 </div>
               </li>
               <li>
@@ -134,8 +132,8 @@
                 <h4 class="goods__caption">Профессиональная селфи-палка</h4>
                 <span class="goods__span">1500 руб.</span>
                 <div class="goods__hover">
-                  <button class="goods__button">В корзину</button>
-                  <button class="goods__button-compare">Добавить к сравнению</button>
+                  <a class="goods__link-incart" href="">В корзину</a>
+                  <a class="goods__link-compare" href="">Добавить к сравнению</a>
                 </div>
               </li>
               <li>
@@ -143,8 +141,8 @@
                 <h4 class="goods__caption">Непотопляемая селфи-палка</h4>
                 <span class="goods__span">2500 руб.</span>
                 <div class="goods__hover">
-                  <button class="goods__button">В корзину</button>
-                  <button class="goods__button-compare">Добавить к сравнению</button>
+                  <a class="goods__link-incart" href="">В корзину</a>
+                  <a class="goods__link-compare" href="">Добавить к сравнению</a>
                 </div>
               </li>
               <li>
@@ -152,8 +150,8 @@
                 <h4 class="goods__caption">Селфи-палка "Следуй за мной"</h4>
                 <span class="goods__span">4900 руб.</span>
                 <div class="goods__hover">
-                  <button class="goods__button">В корзину</button>
-                  <button class="goods__button-compare">Добавить к сравнению</button>
+                  <a class="goods__link-incart" href="">В корзину</a>
+                  <a class="goods__link-compare" href="">Добавить к сравнению</a>
                 </div>
               </li>
             </ul>
@@ -162,16 +160,16 @@
             <li class="pager__item">
               <span>Назад</span>
             </li>
-            <li class="pager__item pager--current">
+            <li class="pager__item pager__item--current">
               <span>1</span>
             </li>
-            <li class="pager-item">
+            <li class="pager__item">
               <a href="" title="На страницу номер 2">2</a>
             </li>
-            <li class="pager-item">
+            <li class="pager__item">
               <a href="" title="На страницу номер 3">3</a>
             </li>
-            <li class="pager-item">
+            <li class="pager__item">
               <a href="" title="На страницу номер 4">4</a>
             </li>
             <li class="pager__item">
@@ -185,13 +183,13 @@
       <img class="page-footer__logo logo" src="http://placehold.it/163x36" alt="logo">
       <ul class="page-footer__user-nav footer-user-nav">
         <li class="footer-user-nav__item">
-          <button class="footer-user-nav__button">Войти</button>
+          <a class="footer-user-nav__link" href="">Войти</a>
         </li>
         <li class="footer-user-nav__item">
-          <button class="footer-user-nav__button">Сравнить</button>
+          <a class="footer-user-nav__link" href="">Сравнить</a>
         </li>
         <li class="footer-user-nav__item">
-          <button class="footer-user-nav__button">Корзина</button>
+          <a class="footer-user-nav__link" href="">Корзина</a>
         </li>
       </ul>
       <p class="page-footer__info">г. Москва, ул. Строителей, 15</p>
