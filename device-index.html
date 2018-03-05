@@ -6,13 +6,13 @@
   </head>
   <body>
     <header class="page-header">
+      <input class="page-header__search" type="text" placeholder="Поиск по сайту">
       <nav class="main-nav">
         <a href="">
           <img class="main-nav__logo logo" src="http://placehold.it/164x36" width="164" height="36">
         </a>
         <ul class="main-nav__user-nav user-nav">
           <li class="user-nav__item">
-            <input class="user-nav__search" type="text" placeholder="Поиск по сайту">
           </li>
           <li class="user-nav__item">
             <button class="user-nav__button">Войти</button>
@@ -64,7 +64,6 @@
               <h2 class="slider__caption">Делай селфи, как Бен Стиллер!</h2>
               <span class="slider__number">01</span>
               <p class="slider__text">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-             <!-- Остановился здесь -->
               <a class="slider__link" href="">Подробнее</a>
               <table class="slider__table feature-table">
                 <tr class="feature-table__row">
@@ -212,76 +211,76 @@
         </div>
       </section>
     </main>
-      <footer class="page-footer">
-        <img class="page-footer__logo logo" src="http://placehold.it/163x36" alt="logo">
-        <ul class="page-footer__user-nav footer-user-nav">
-          <li class="footer-user-nav__item">
-            <button class="footer-user-nav__button">Войти</button>
-          </li>
-          <li class="footer-user-nav__item">
-            <button class="footer-user-nav__button">Сравнить</button>
-          </li>
-          <li class="footer-user-nav__item">
-            <button class="footer-user-nav__button">Корзина</button>
-          </li>
-        </ul>
-        <p class="page-footer__info">г. Москва, ул. Строителей, 15</p>
-        <ul class="page-footer__nav footer-site-nav">
-          <li class="footer-site-nav__item">
-            <a class="footer-site-nav__link" href="">Доставка</a>
-          </li>
-          <li class="footer-site-nav__item">
-            <a class="footer-site-nav__link" href="">Гарантия</a>
-          </li>
-          <li class="footer-site-nav__item">
-            <a class="footer-site-nav__link" href="">Контакты</a>
-          </li>
-        </ul>
-        <p class="page-footer__info">Тел.: +7 (495) 495-95-95</p>
-        <ul class="page-footer__social social">
-          <li class="social__item">
-            <a class="social__link social__link--facebook" href="#">
-              <img class="social__image" src="http://placehold.it/32x32" width="32" height="32" alt="facebook">
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--instagram" href="#">
-              <img class="social__image" src="http://placehold.it/32x32" width="32" height="32" alt="instagram">
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--twitter" href="#">
-              <img class="social__image" src="http://placehold.it/32x32" width="32" height="32" alt="twitter">
-            </a>
-          </li>
-        </ul>
-        <div class="page-footer__copyright copyright">
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/htmlcss">
-            <img src="http://placehold.it/27x35" width="27" alt="academy">
+    <footer class="page-footer">
+      <img class="page-footer__logo logo" src="http://placehold.it/163x36" alt="logo">
+      <ul class="page-footer__user-nav footer-user-nav">
+        <li class="footer-user-nav__item">
+          <button class="footer-user-nav__button">Войти</button>
+        </li>
+        <li class="footer-user-nav__item">
+          <button class="footer-user-nav__button">Сравнить</button>
+        </li>
+        <li class="footer-user-nav__item">
+          <button class="footer-user-nav__button">Корзина</button>
+        </li>
+      </ul>
+      <p class="page-footer__info">г. Москва, ул. Строителей, 15</p>
+      <ul class="page-footer__nav footer-site-nav">
+        <li class="footer-site-nav__item">
+          <a class="footer-site-nav__link" href="">Доставка</a>
+        </li>
+        <li class="footer-site-nav__item">
+          <a class="footer-site-nav__link" href="">Гарантия</a>
+        </li>
+        <li class="footer-site-nav__item">
+          <a class="footer-site-nav__link" href="">Контакты</a>
+        </li>
+      </ul>
+      <p class="page-footer__info">Тел.: +7 (495) 495-95-95</p>
+      <ul class="page-footer__social social">
+        <li class="social__item">
+          <a class="social__link social__link--facebook" href="#">
+            <img class="social__image" src="http://placehold.it/32x32" width="32" height="32" alt="facebook">
           </a>
-        </div>
-      </footer>
-      <section class="modal modal-login">
-        <form action="https://echo.htmlacademy.ru" method="post">
-          <p class="modal-login__item">
-            <label class="modal-login__label" for="name">Ваше имя:</label>
-            <input class="modal-login__input" type="text" id="name" placeholder="Имя Фамилия">
-          </p>
-          <p>
-            <label class="modal-login__label" for="email">Ваш e-mail:</label>
-            <input class="modal-login__input" type="email" id="email" placeholder="email@example.com">
-          </p>
-          <p>
-            <label class="modal-login__label" for="textarea">Текст письма</label>
-            <textarea class="modal-login__textarea" name="" id="textarea" cols="30" rows="10" placeholder="В свободной форме"></textarea>
-          </p>
-          <button class="modal-login__button" type="submit">Отправить</button>
-        </form>
-          <button class="modal-login__close-button">x</button>
-      </section>
-      <section class="modal modal-map">
-        <img class="modal-map__image" src="http://placehold.it/400x300" alt="карта">
-        <button class="modal-map__close-button">x</button>
-      </section>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--instagram" href="#">
+            <img class="social__image" src="http://placehold.it/32x32" width="32" height="32" alt="instagram">
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--twitter" href="#">
+            <img class="social__image" src="http://placehold.it/32x32" width="32" height="32" alt="twitter">
+          </a>
+        </li>
+      </ul>
+      <div class="page-footer__copyright copyright">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/htmlcss">
+          <img src="http://placehold.it/27x35" width="27" alt="academy">
+        </a>
+      </div>
+    </footer>
+    <section class="modal modal-login">
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <p class="modal-login__item">
+          <label class="modal-login__label" for="name">Ваше имя:</label>
+          <input class="modal-login__input" type="text" id="name" placeholder="Имя Фамилия">
+        </p>
+        <p>
+          <label class="modal-login__label" for="email">Ваш e-mail:</label>
+          <input class="modal-login__input" type="email" id="email" placeholder="email@example.com">
+        </p>
+        <p>
+          <label class="modal-login__label" for="textarea">Текст письма</label>
+          <textarea class="modal-login__textarea" name="" id="textarea" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+        </p>
+        <button class="modal-login__button" type="submit">Отправить</button>
+      </form>
+        <button class="modal-login__close-button">x</button>
+    </section>
+    <section class="modal modal-map">
+      <img class="modal-map__image" src="http://placehold.it/400x300" alt="карта">
+      <button class="modal-map__close-button">x</button>
+    </section>
   </body>
 </html>
