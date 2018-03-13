@@ -6,8 +6,8 @@
   </head>
   <body>
     <header class="page-header">
-      <input class="page-header__search" type="text" placeholder="Поиск по сайту">
-      <img class="page-header__logo logo" src="img/logo.png" width="164" height="36">
+      <input class="page-header__search" type="text" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
+      <img class="page-header__logo logo" src="img/logo.png" width="164" height="36" alt="Логотип компании Device">
       <nav class="main-nav">
         <ul class="main-nav__user-nav user-nav">
           <li class="user-nav__item">
@@ -45,6 +45,7 @@
       </nav>
     </header>
     <main class="page-main">
+      <h1 class="visually-hidden">Каталог товаров Device</h1>
       <section class="catalog">
         <h2 class="catalog__caption">Моноподы для селфи</h2>
         <ul class="catalog__breadcrumbs breadcrumbs">
@@ -57,8 +58,10 @@
           <form action="https://echo.htmlacademy.ru" method="post">
             <fieldset class="filter__item">
               <legend class="filter__legend">Стоимость</legend>
-              <input class="filter__input-min" name="range_1" type="range" min="0" max="10000" value="0" />
-              <input class="filter__input-max" name="range_1" type="range" min="0" max="10000" value="5000" />
+              <input class="filter__input-min" id="filter-min-price" name="filter-range" type="range" min="0" max="10000" value="0"/>
+              <label class="visually-hidden" for="filter-min-price">Минимальная цена</label>
+              <input class="filter__input-max" id="filter-max-price" name="filter-range" type="range" min="0" max="10000" value="5000"/>
+              <label class="visually-hidden" for="filter-max-price">Максимальная цена</label>
               <span class="filter__range-text">От</span><span class="filter__range-value">0</span>
               <span class="filter__range-text">До</span><span class="filter__range-value">5000</span>
             </fieldset>
@@ -88,11 +91,11 @@
             <fieldset class="filter__item">
               <legend class="filter__legend">Bluetooth</legend>
               <p>
-                <input class="filter__radio" type="radio" id="btn-bluetooth-1" name="toggle" checked>
+                <input class="filter__radio" type="radio" id="btn-bluetooth-1" name="toggle-bluetooth" checked>
                 <label class="filter__label" for="btn-bluetooth-1">Есть</label>
               </p>
               <p>
-                <input class="filter__radio" type="radio" id="btn-bluetooth-2" name="toggle">
+                <input class="filter__radio" type="radio" id="btn-bluetooth-2" name="toggle-bluetooth">
                 <label class="filter__label" for="btn-bluetooth-2">Нет</label>
               </p>
             </fieldset>
@@ -103,23 +106,27 @@
           <h3 class="goods__caption">Сортировка</h3>
           <ul class="goods__sorting sorting">
             <li class="sorting__item">
-              <button class="sorting__button">По цене</button>
+              <button class="sorting__button" type="button" aria-label="Сортировка">По цене</button>
             </li>
             <li class="sorting__item">
-              <button class="sorting__button">По типу</button>
+              <button class="sorting__button" type="button" aria-label="Сортировка">По типу</button>
             </li>
             <li class="sorting__item">
-              <button class="sorting__button">По популярности</button>
+              <button class="sorting__button" type="button" aria-label="Сортировка">По популярности</button>
             </li>
           </ul>
           <ul class="goods__sorting arrows">
-            <li class="arrows">up</li>
-            <li class="arrows arrows--down">down</li>
+            <li class="arrows-item">
+              <button class="arrows-button" type="button" aria-label="Сортировка по убыванию">up</button>
+            </li>
+            <li class="arrows-item">
+              <button class="arrows-button arrows-button-down" type="button" aria-label="Сортировка по возрастанию">down</button>
+            </li>
           </ul>
           <div class="goods__wrapper">
             <ul class="goods__list">
               <li class="goods__item">
-                <img class="goods__image" src="img/item-1.jpg" width="360" alt="">
+                <img class="goods__image" src="img/item-1.jpg" width="360" alt="Любительская селфи-палка">
                 <h4 class="goods__caption">Любительская селфи-палка</h4>
                 <span class="goods__span">500 руб.</span>
                 <div class="goods__hover">
@@ -128,7 +135,7 @@
                 </div>
               </li>
               <li>
-                <img class="goods__image" src="img/item-2.jpg" width="360" alt="">
+                <img class="goods__image" src="img/item-2.jpg" width="360" alt="Профессиональная селфи-палка">
                 <h4 class="goods__caption">Профессиональная селфи-палка</h4>
                 <span class="goods__span">1500 руб.</span>
                 <div class="goods__hover">
@@ -137,7 +144,7 @@
                 </div>
               </li>
               <li>
-                <img class="goods__image" src="img/item-3.jpg" width="360" alt="">
+                <img class="goods__image" src="img/item-3.jpg" width="360" alt="Непотопляемая селфи-палка">
                 <h4 class="goods__caption">Непотопляемая селфи-палка</h4>
                 <span class="goods__span">2500 руб.</span>
                 <div class="goods__hover">
@@ -146,7 +153,7 @@
                 </div>
               </li>
               <li>
-                <img class="goods__image" src="img/item-4.jpg" width="360" alt="">
+                <img class="goods__image" src="img/item-4.jpg" width="360" alt="Селфи-палка &#8222Следуй за мной&#8220">
                 <h4 class="goods__caption">Селфи-палка "Следуй за мной"</h4>
                 <span class="goods__span">4900 руб.</span>
                 <div class="goods__hover">
@@ -164,16 +171,16 @@
               <span>1</span>
             </li>
             <li class="pager__item">
-              <a href="" title="На страницу номер 2">2</a>
+              <a href="" aria-label="На страницу номер 2">2</a>
             </li>
             <li class="pager__item">
-              <a href="" title="На страницу номер 3">3</a>
+              <a href="" aria-label="На страницу номер 3">3</a>
             </li>
             <li class="pager__item">
-              <a href="" title="На страницу номер 4">4</a>
+              <a href="" aria-label="На страницу номер 4">4</a>
             </li>
             <li class="pager__item">
-              <a href="" title="На следующую страницу">Вперед</a>
+              <a href="" aria-label="На следующую страницу">Вперед</a>
             </li>
           </ul>
         </div>
@@ -207,24 +214,24 @@
       <p class="page-footer__info">Тел.: +7 (495) 495-95-95</p>
       <ul class="page-footer__social social">
         <li class="social__item">
-          <a class="social__link social__link--facebook" href="#">
+          <a class="social__link social__link--facebook" href="#" aria-label="Группа в facebook">
             <img class="social__image" src="img/fb.svg" width="32" height="32" alt="facebook">
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--instagram" href="#">
+          <a class="social__link social__link--instagram" href="#" aria-label="Группа в instagram">
             <img class="social__image" src="img/instagram.svg" width="32" height="32" alt="instagram">
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--twitter" href="#">
+          <a class="social__link social__link--twitter" href="#" aria-label="Группа в twitter">
             <img class="social__image" src="img/twitter.svg" width="32" height="32" alt="twitter">
           </a>
         </li>
       </ul>
       <div class="page-footer__copyright copyright">
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/htmlcss">
-          <img src="img/logo-html.svg" width="27" alt="academy">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="HTML Academy">
+          <img src="img/logo-html.svg" width="27" alt="HTML Academy">
         </a>
       </div>
     </footer>
