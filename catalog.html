@@ -3,11 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
-      <input class="page-header__search" type="text" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
       <img class="page-header__logo logo" src="img/logo.png" width="164" height="36" alt="Логотип компании Device">
+      <div class="page-header__search">
+        <form class="page-header__form" action="https://echo.htmlacademy.ru" method="post" id="search-form">
+          <input class="page-header__input" name="search" id="search" type="text" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
+          <button class="page-header__search-button" type="submit" form="search-form">Найти</button>
+        </form>
+      </div>
       <nav class="main-nav">
         <ul class="main-nav__user-nav user-nav">
           <li class="user-nav__item">
@@ -22,15 +29,29 @@
         </ul>
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
-            <a class="site-list__link" href="">Каталог товаров</a>
-            <ul class="site-list__catalog drop-down-catalog">
-              <li class="drop-down-catalog__item"><a href="">Виртуальная реальность</a></li>
-              <li class="drop-down-catalog__item"><a href="">Моноподы для селфи</a></li>
-              <li class="drop-down-catalog__item"><a href="">Экшн-камеры</a></li>
-              <li class="drop-down-catalog__item"><a href="">Фитнес-браслеты</a></li>
-              <li class="drop-down-catalog__item"><a href="">Умные часы</a></li>
-              <li class="drop-down-catalog__item"><a href="">Квадрокоптеры</a></li>
-            </ul>
+            <div class="site-list__wrapper">
+              <a class="site-list__link drop-down-catalog" href="">Каталог товаров
+              </a>
+              <ul class="drop-down-catalog__list">
+                <li class="drop-down-catalog__item">
+                  <a class="drop-down-catalog__link" href="">Виртуальная реальность</a>
+                </li>
+                <li class="drop-down-catalog__item">
+                  <a class="drop-down-catalog__link" href="">Моноподы для селфи</a>
+                </li>
+                <li class="drop-down-catalog__item">
+                  <a class="drop-down-catalog__link" href="">Экшн-камеры</a>
+                </li>
+                <li class="drop-down-catalog__item">
+                  <a class="drop-down-catalog__link" href="">Фитнес-браслеты</a></li>
+                <li class="drop-down-catalog__item">
+                  <a class="drop-down-catalog__link" href="">Умные часы</a>
+                </li>
+                <li class="drop-down-catalog__item">
+                  <a class="drop-down-catalog__link" href="">Квадрокоптеры</a>
+                </li>
+              </ul>
+            </div>
           </li>
           <li class="site-list__item">
             <a class="site-list__link" href="">Доставка</a>
@@ -49,8 +70,14 @@
       <section class="catalog">
         <h2 class="catalog__caption">Моноподы для селфи</h2>
         <ul class="catalog__breadcrumbs breadcrumbs">
-          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="">Главная</a></li>
-          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="">Каталог товаров</a></li>
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="#">Главная</a>
+            <svg xmlns="http://www.w3.org/2000/svg" width="4" height="7" viewBox="0 0 4 7"><path class="breadcrumbs__icon" d="M3.83 3.132L.861.144a.5.5 0 0 0-.713 0 .508.508 0 0 0 0 .718l2.611 2.629L.148 6.12a.51.51 0 0 0 0 .72.5.5 0 0 0 .713 0L3.83 3.852a.51.51 0 0 0 .147-.36.507.507 0 0 0-.147-.36z"/></svg>
+          </li>
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="#">Каталог товаров</a>
+            <svg xmlns="http://www.w3.org/2000/svg" width="4" height="7" viewBox="0 0 4 7"><path class="breadcrumbs__icon" d="M3.83 3.132L.861.144a.5.5 0 0 0-.713 0 .508.508 0 0 0 0 .718l2.611 2.629L.148 6.12a.51.51 0 0 0 0 .72.5.5 0 0 0 .713 0L3.83 3.852a.51.51 0 0 0 .147-.36.507.507 0 0 0-.147-.36z"/></svg>
+          </li>
           <li class="breadcrumbs__item">Моноподы для селфи</li>
         </ul>
         <div class="catalog__filter filter">
@@ -92,18 +119,18 @@
               <legend class="filter__legend">Bluetooth</legend>
               <p>
                 <input class="filter__radio" type="radio" id="btn-bluetooth-1" name="toggle-bluetooth" checked>
-                <label class="filter__label" for="btn-bluetooth-1">Есть</label>
+                <label class="filter__label-radio" for="btn-bluetooth-1">Есть</label>
               </p>
               <p>
                 <input class="filter__radio" type="radio" id="btn-bluetooth-2" name="toggle-bluetooth">
-                <label class="filter__label" for="btn-bluetooth-2">Нет</label>
+                <label class="filter__label-radio" for="btn-bluetooth-2">Нет</label>
               </p>
             </fieldset>
-            <button class="filter__button" type="submit">Показать</button>
+            <button class="filter__button button" type="submit">Показать</button>
           </form>
         </div>
         <div class="catalog__goods goods">
-          <h3 class="goods__caption">Сортировка</h3>
+          <h3 class="goods__caption">Сортировка:</h3>
           <ul class="goods__sorting sorting">
             <li class="sorting__item">
               <a class="sorting__link" href="" aria-label="Сортировка">По цене</a>
@@ -134,7 +161,7 @@
                 <h4 class="goods__caption">Любительская селфи-палка</h4>
                 <span class="goods__span">500 руб.</span>
                 <div class="goods__hover">
-                  <a class="goods__link-incart" href="">В корзину</a>
+                  <a class="goods__link-incart button" href="">В корзину</a>
                   <a class="goods__link-compare" href="">Добавить к сравнению</a>
                 </div>
               </li>
@@ -143,7 +170,7 @@
                 <h4 class="goods__caption">Профессиональная селфи-палка</h4>
                 <span class="goods__span">1500 руб.</span>
                 <div class="goods__hover">
-                  <a class="goods__link-incart" href="">В корзину</a>
+                  <a class="goods__link-incart button" href="">В корзину</a>
                   <a class="goods__link-compare" href="">Добавить к сравнению</a>
                 </div>
               </li>
@@ -152,7 +179,7 @@
                 <h4 class="goods__caption">Непотопляемая селфи-палка</h4>
                 <span class="goods__span">2500 руб.</span>
                 <div class="goods__hover">
-                  <a class="goods__link-incart" href="">В корзину</a>
+                  <a class="goods__link-incart button" href="">В корзину</a>
                   <a class="goods__link-compare" href="">Добавить к сравнению</a>
                 </div>
               </li>
@@ -161,7 +188,7 @@
                 <h4 class="goods__caption">Селфи-палка "Следуй за мной"</h4>
                 <span class="goods__span">4900 руб.</span>
                 <div class="goods__hover">
-                  <a class="goods__link-incart" href="">В корзину</a>
+                  <a class="goods__link-incart button" href="">В корзину</a>
                   <a class="goods__link-compare" href="">Добавить к сравнению</a>
                 </div>
               </li>
@@ -191,7 +218,7 @@
       </section>
     </main>
     <footer class="page-footer">
-      <img class="page-footer__logo logo" src="img/logo-footer.png" alt="logo" width="164" height="36">
+      <img class="page-footer__logo logo" src="img/logo-footer.png" width="164" height="36" alt="Логотип фирмы Device">
       <ul class="page-footer__user-nav footer-user-nav">
         <li class="footer-user-nav__item">
           <a class="footer-user-nav__link" href="">Войти</a>
@@ -234,8 +261,8 @@
         </li>
       </ul>
       <div class="page-footer__copyright copyright">
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="HTML Academy">
-          <img src="img/logo-html.svg" width="27" alt="HTML Academy">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="HTML academy">
+          <img class="copyright__image" src="img/logo-html.svg" width="27" alt="HTML Academy">
         </a>
       </div>
     </footer>
