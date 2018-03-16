@@ -211,25 +211,27 @@ a {
 
   list-style: none;
 }
-.site-list__icon {
-  /*Есть ли простой способ сделать так, что бы opacity не наследовалась от site-list__link?
-  Можно ли просто вынести иконку за пределы ссылки или она тоже должна быть ссылкой?*/
+.site-list__link {
+  color: rgba(0,0,0, 1)
+}
+.site-list__link:hover,
+.site-list__link:focus {
+  color: rgba(0,0,0, 0.6)
+}
+.site-list__link:active {
+  color: rgba(0,0,0, 0.3)
 }
 .page-header__logo-link:hover,
 .user-nav__link:hover,
 .user-nav__link:hover .user-nav__icon,
 .footer-user-nav__link:hover .footer-user-nav__icon,
-.site-list__link:hover,
 .drop-down-catalog__link:hover,
 .footer-user-nav__link:hover,
 .footer-site-nav__link:hover,
-.social__image:hover {
-  opacity: 0.6;
-}
+.social__image:hover,
 .page-header__logo-link:focus,
 .user-nav__link:focus,
 .user-nav__link:focus .user-nav__icon,
-.site-list__link:focus,
 .drop-down-catalog__link:focus,
 .footer-user-nav__link:focus,
 .footer-site-nav__link:focus,
@@ -239,7 +241,6 @@ a {
 .page-header__logo-link:active,
 .user-nav__link:active,
 .user-nav__link:active .user-nav__icon,
-.site-list__link:active,
 .drop-down-catalog__link:active,
 .footer-user-nav__link:active,
 .footer-site-nav__link:active,
@@ -378,7 +379,6 @@ a {
   font-size: 16px;
   line-height: 40px;
 }
-/*Судя по макету нужно применить тут svg-иконку "slider-button", но я не понял как её видоизменить чтобы она стала похожей на ту, что в макете и сделал кружок сам.*/
 .info__delivery-item::before {
   content: "";
   position: absolute;
@@ -400,10 +400,9 @@ a {
   width: 360px;
   height: 50px;
 }
-..modal-write-us__textarea {
+.modal-write-us__textarea {
   width: 760px;
   height: 156px;
-  /*Как сделать нужный размер с помощью css, а не с помощью cols и rows?*/
 }
 .modal-write-us__input::placeholder,
 .modal-write-us__textarea::placeholder {
