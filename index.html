@@ -11,26 +11,40 @@
       <img class="page-header__logo logo" src="img/logo.png" width="164" height="36" alt="Логотип компании Device">
       <div class="page-header__search">
         <form class="page-header__form" action="https://echo.htmlacademy.ru" method="post" id="search-form">
-          <input class="page-header__input" name="search" id="search" type="text" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
-          <button class="page-header__search-button" type="submit" form="search-form">Найти</button>
+          <label class="page-header__label" for="search">
+            <svg class="page-header__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M15.7 14.3l-3.104-3.104A6.979 6.979 0 0 0 14 7a7 7 0 1 0-7 7 6.963 6.963 0 0 0 4.193-1.404L14.3 15.7c.185.184.38.3.7.3a1 1 0 0 0 1-1 .93.93 0 0 0-.3-.7zM2 7c0-2.762 2.238-5 5-5s5 2.238 5 5-2.238 5-5 5-5-2.238-5-5z"/></svg>
+            <button class="page-header__search-button" type="submit" form="search-form">Найти</button>
+            <input class="page-header__input" name="search" id="search" type="text" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
+          </label>
         </form>
       </div>
       <nav class="main-nav">
         <ul class="main-nav__user-nav user-nav">
           <li class="user-nav__item">
-            <a class="user-nav__link" href="">Войти</a>
+            <a class="user-nav__link" href="">
+              <svg class="user-nav__icon" xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><path d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 0 0 1.687-2.972 3.485 3.485 0 0 0-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z"/></svg>
+              <span>Войти</span>
+            </a>
           </li>
           <li class="user-nav__item">
-            <a class="user-nav__link" href="">Сравнить</a>
+            <a class="user-nav__link" href="">
+              <svg class="user-nav__icon" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><path d="M8 2h1.984v8H8zM0 3h1.984v7H0zM4 0h2v10H4z"/></svg>
+              <span>Сравнить</span>
+            </a>
           </li>
           <li class="user-nav__item">
-            <a class="user-nav__link" href="">Корзина</a>
+            <a class="user-nav__link" href="">
+              <svg class="user-nav__icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path d="M11.864 3.017a.429.429 0 0 0-.327-.154H9.225V4.09c0 .563-.484 1.022-1.08 1.022-.594 0-1.078-.458-1.078-1.022V2.863H4.909V4.09c0 .563-.485 1.022-1.08 1.022-.595 0-1.078-.458-1.078-1.022V2.863H.438a.43.43 0 0 0-.327.154.472.472 0 0 0-.108.358l.776 7.134c.015.806.642 1.455 1.411 1.455h7.595c.77 0 1.396-.649 1.411-1.455l.776-7.134a.476.476 0 0 0-.108-.358z"/><path d="M3.829 4.499c.239 0 .433-.184.433-.409V1.84c0-.632.672-1.022 1.295-1.022h1.079c.655 0 1.078.401 1.078 1.022v2.25c0 .225.194.409.431.409.239 0 .433-.184.433-.409V1.84C8.577.773 7.761 0 6.636 0H5.557c-1.19 0-2.159.826-2.159 1.84v2.25c0 .225.194.409.431.409z"/></svg>
+              <span>Корзина</span>
+            </a>
           </li>
         </ul>
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
             <div class="site-list__wrapper">
-              <a class="site-list__link drop-down-catalog" href="">Каталог товаров
+              <a class="site-list__link drop-down-catalog" href="">
+                <span>Каталог товаров</span>
+                <svg class="site-list__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="#b8a974" d="M16 7H9V0H7v7H0v2h7v7h2V9h7z"/></svg>
               </a>
               <ul class="drop-down-catalog__list">
                 <li class="drop-down-catalog__item">
@@ -70,18 +84,18 @@
       <section class="slider">
         <ul class="slider__switches">
           <li class="slider__radio">
-            <button class="slider__button" type="button" aria-label="Товар №1">
-              <img class="slider__radio-image" src="img/slider-button.svg" alt="Товар №1">
+            <button class="slider__button slider__button--active" type="button" aria-label="Товар №1">
+              <svg class="slider__icon-active" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 23 23"><path d="M11.5 2c5.238 0 9.5 4.262 9.5 9.5S16.738 21 11.5 21 2 16.738 2 11.5 6.262 2 11.5 2m0-2C5.149 0 0 5.149 0 11.5 0 17.852 5.149 23 11.5 23 17.852 23 23 17.852 23 11.5 23 5.149 17.852 0 11.5 0z"/><path d="M11.5 9.004a2.5 2.5 0 0 1 2.496 2.496 2.5 2.5 0 0 1-2.496 2.496A2.5 2.5 0 0 1 9.004 11.5 2.5 2.5 0 0 1 11.5 9.004m0-2a4.496 4.496 0 1 0 0 8.992 4.496 4.496 0 0 0 0-8.992z"/></svg>
             </button>
           </li>
           <li class="slider__radio">
             <button class="slider__button" type="button" aria-label="Товар №2">
-              <img class="slider__radio-image" src="img/slider-button-empty.svg" alt="Товар №2">
+              <svg class="slider__icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 23 23"><path d="M11.5 2c5.238 0 9.5 4.262 9.5 9.5S16.738 21 11.5 21 2 16.738 2 11.5 6.262 2 11.5 2m0-2C5.149 0 0 5.149 0 11.5 0 17.852 5.149 23 11.5 23 17.852 23 23 17.852 23 11.5 23 5.149 17.852 0 11.5 0z"/></svg>
             </button>
           </li>
           <li class="slider__radio">
             <button class="slider__button" type="button" aria-label="Товар №3">
-              <img class="slider__radio-image" src="img/slider-button-empty.svg" alt="Товар №3">
+              <svg class="slider__icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 23 23"><path d="M11.5 2c5.238 0 9.5 4.262 9.5 9.5S16.738 21 11.5 21 2 16.738 2 11.5 6.262 2 11.5 2m0-2C5.149 0 0 5.149 0 11.5 0 17.852 5.149 23 11.5 23 17.852 23 23 17.852 23 11.5 23 5.149 17.852 0 11.5 0z"/></svg>
             </button>
           </li>
         </ul>
@@ -265,7 +279,7 @@
         </div>
         <div class="company__contacts contacs">
           <h2 class="contacs__caption">Контакты</h2>
-          <p class="contacs__text">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
+          <p class="contacts__text">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
           <button class="contacts__pop-up-map-button" type="button">
             <img class="contacs__image" src="img/map.png" width="560" height="222" alt="г. Москва, ул. Строителей, 15">
           </button>
@@ -276,16 +290,25 @@
     <footer class="page-footer">
       <img class="page-footer__logo logo" src="img/logo-footer.png" width="164" height="36" alt="Логотип фирмы Device">
       <ul class="page-footer__user-nav footer-user-nav">
-        <li class="footer-user-nav__item">
-          <a class="footer-user-nav__link" href="">Войти</a>
-        </li>
-        <li class="footer-user-nav__item">
-          <a class="footer-user-nav__link" href="">Сравнить</a>
-        </li>
-        <li class="footer-user-nav__item">
-          <a class="footer-user-nav__link" href="">Корзина</a>
-        </li>
-      </ul>
+          <li class="footer-user-nav__item">
+            <a class="footer-user-nav__link" href="">
+              <svg class="footer-user-nav__icon" xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><path fill="#ffc600" d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 0 0 1.687-2.972 3.485 3.485 0 0 0-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z"/></svg>
+              <span>Войти</span>
+            </a>
+          </li>
+          <li class="footer-user-nav__item">
+            <a class="footer-user-nav__link" href="">
+              <svg class="footer-user-nav__icon" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><path fill="#ffc600" d="M8 2h1.984v8H8zM0 3h1.984v7H0zM4 0h2v10H4z"/></svg>
+              <span>Сравнить</span>
+            </a>
+          </li>
+          <li class="footer-user-nav__item">
+            <a class="footer-user-nav__link" href="">
+              <svg class="footer-user-nav__icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path fill="#ffc600" d="M11.864 3.017a.429.429 0 0 0-.327-.154H9.225V4.09c0 .563-.484 1.022-1.08 1.022-.594 0-1.078-.458-1.078-1.022V2.863H4.909V4.09c0 .563-.485 1.022-1.08 1.022-.595 0-1.078-.458-1.078-1.022V2.863H.438a.43.43 0 0 0-.327.154.472.472 0 0 0-.108.358l.776 7.134c.015.806.642 1.455 1.411 1.455h7.595c.77 0 1.396-.649 1.411-1.455l.776-7.134a.476.476 0 0 0-.108-.358z"/><path fill="#ffc600" d="M3.829 4.499c.239 0 .433-.184.433-.409V1.84c0-.632.672-1.022 1.295-1.022h1.079c.655 0 1.078.401 1.078 1.022v2.25c0 .225.194.409.431.409.239 0 .433-.184.433-.409V1.84C8.577.773 7.761 0 6.636 0H5.557c-1.19 0-2.159.826-2.159 1.84v2.25c0 .225.194.409.431.409z"/></svg>
+              <span>Корзина</span>
+            </a>
+          </li>
+        </ul>
       <p class="page-footer__info">г. Москва, ул. Строителей, 15</p>
       <ul class="page-footer__nav footer-site-nav">
         <li class="footer-site-nav__item">
@@ -340,13 +363,13 @@
         <button class="modal-write-us__button button" type="submit">Отправить</button>
       </form>
       <button class="modal-write-us__close-button" type="button" aria-label="Закрыть окно">
-        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="22" viewBox="0 0 23 22"><path class="modal-write-us__icon" d="M22.979 20.569l-9.99-9.574 9.989-9.573-1.487-1.425-9.988 9.573L1.516-.003.029 1.422l9.987 9.573-9.988 9.574 1.488 1.425 9.987-9.574 9.989 9.574z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55"><path class="modal-write-us__icon" fill="#F0C52E" d="M27.5 0C12.312 0 0 12.312 0 27.5S12.312 55 27.5 55 55 42.688 55 27.5 42.688 0 27.5 0zm11.476 37.072l-1.486 1.426-9.99-9.574-9.987 9.574-1.488-1.426 9.988-9.573-9.987-9.573 1.487-1.425 9.987 9.573 9.988-9.573 1.487 1.425-9.989 9.574 9.99 9.572z"/></svg>
       </button>
     </section>
     <section class="modal modal-map">
       <img class="modal-map__image" src="img/map-big.png" width="960" height="559" alt="г. Москва, ул. Строителей, 15">
       <button class="modal-map__close-button" type="button" aria-label="Закрыть окно">
-        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="22" viewBox="0 0 23 22"><path class="modal-map__icon" d="M22.979 20.569l-9.99-9.574 9.989-9.573-1.487-1.425-9.988 9.573L1.516-.003.029 1.422l9.987 9.573-9.988 9.574 1.488 1.425 9.987-9.574 9.989 9.574z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55"><path class="modal-map__icon" fill="#F0C52E" d="M27.5 0C12.312 0 0 12.312 0 27.5S12.312 55 27.5 55 55 42.688 55 27.5 42.688 0 27.5 0zm11.476 37.072l-1.486 1.426-9.99-9.574-9.987 9.574-1.488-1.426 9.988-9.573-9.987-9.573 1.487-1.425 9.987 9.573 9.988-9.573 1.487 1.425-9.989 9.574 9.99 9.572z"/></svg>
       </button>
     </section>
   </body>

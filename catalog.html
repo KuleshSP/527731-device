@@ -8,23 +8,37 @@
   </head>
   <body>
     <header class="page-header">
-      <img class="page-header__logo logo" src="img/logo.png" width="164" height="36" alt="Логотип компании Device">
+      <a class="page-header__logo-link" href="#" aria-label="Перейти на главную страницу">
+        <img class="page-header__logo logo" src="img/logo.png" width="164" height="36" alt="Логотип компании Device">
+      </a>
       <div class="page-header__search">
         <form class="page-header__form" action="https://echo.htmlacademy.ru" method="post" id="search-form">
-          <input class="page-header__input" name="search" id="search" type="text" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
-          <button class="page-header__search-button" type="submit" form="search-form">Найти</button>
+          <label class="page-header__label" for="search">
+            <svg class="page-header__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M15.7 14.3l-3.104-3.104A6.979 6.979 0 0 0 14 7a7 7 0 1 0-7 7 6.963 6.963 0 0 0 4.193-1.404L14.3 15.7c.185.184.38.3.7.3a1 1 0 0 0 1-1 .93.93 0 0 0-.3-.7zM2 7c0-2.762 2.238-5 5-5s5 2.238 5 5-2.238 5-5 5-5-2.238-5-5z"/></svg>
+            <button class="page-header__search-button" type="submit" form="search-form">Найти</button>
+            <input class="page-header__input" name="search" id="search" type="text" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
+          </label>
         </form>
       </div>
       <nav class="main-nav">
         <ul class="main-nav__user-nav user-nav">
           <li class="user-nav__item">
-            <a class="user-nav__link" href="">Войти</a>
+            <a class="user-nav__link" href="">
+              <svg class="user-nav__icon" xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><path fill="#272525" d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 0 0 1.687-2.972 3.485 3.485 0 0 0-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z"/></svg>
+              <span>Войти</span>
+            </a>
           </li>
           <li class="user-nav__item">
-            <a class="user-nav__link" href="">Сравнить</a>
+            <a class="user-nav__link" href="">
+              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><path d="M8 2h1.984v8H8zM0 3h1.984v7H0zM4 0h2v10H4z"/></svg>
+              <span>Сравнить</span>
+            </a>
           </li>
           <li class="user-nav__item">
-            <a class="user-nav__link" href="">Корзина</a>
+            <a class="user-nav__link" href="">
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path d="M11.864 3.017a.429.429 0 0 0-.327-.154H9.225V4.09c0 .563-.484 1.022-1.08 1.022-.594 0-1.078-.458-1.078-1.022V2.863H4.909V4.09c0 .563-.485 1.022-1.08 1.022-.595 0-1.078-.458-1.078-1.022V2.863H.438a.43.43 0 0 0-.327.154.472.472 0 0 0-.108.358l.776 7.134c.015.806.642 1.455 1.411 1.455h7.595c.77 0 1.396-.649 1.411-1.455l.776-7.134a.476.476 0 0 0-.108-.358z"/><path d="M3.829 4.499c.239 0 .433-.184.433-.409V1.84c0-.632.672-1.022 1.295-1.022h1.079c.655 0 1.078.401 1.078 1.022v2.25c0 .225.194.409.431.409.239 0 .433-.184.433-.409V1.84C8.577.773 7.761 0 6.636 0H5.557c-1.19 0-2.159.826-2.159 1.84v2.25c0 .225.194.409.431.409z"/></svg>
+              <span>Корзина</span>
+            </a>
           </li>
         </ul>
         <ul class="main-nav__list site-list">
@@ -133,24 +147,24 @@
           <h3 class="goods__caption">Сортировка:</h3>
           <ul class="goods__sorting sorting">
             <li class="sorting__item">
-              <a class="sorting__link" href="" aria-label="Сортировка">По цене</a>
+              <a class="sorting__link" href="#" aria-label="Сортировка">По цене</a>
             </li>
             <li class="sorting__item">
-              <a class="sorting__link" href="" aria-label="Сортировка">По типу</a>
+              <a class="sorting__link" href="#" aria-label="Сортировка">По типу</a>
             </li>
             <li class="sorting__item">
-              <a class="sorting__link" href="" aria-label="Сортировка">По популярности</a>
+              <a class="sorting__link" href="#" aria-label="Сортировка">По популярности</a>
             </li>
           </ul>
           <ul class="goods__sorting arrows">
             <li class="arrows__item">
               <a class="arrows__link" href="" aria-label="Сортировка по убыванию">
-                <img class="arrows__image" src="img/icon-up-dir.svg" alt="Сортировка по убыванию">
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path class="arrows__icon-up" fill="#231F20" d="M5.5 0L0 10h11z"/></svg>
               </a>
             </li>
             <li class="arrows__item">
               <a class="arrows__link" href="" aria-label="Сортировка по возрастанию">
-                <img class="arrows__image" src="img/icon-down-dir.svg" alt="Сортировка по возрастанию">
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path class="arrows__icon-down" fill="#231F20" d="M5.5 10L0 0h11"/></svg>
               </a>
             </li>
           </ul>
@@ -159,34 +173,34 @@
               <li class="goods__item">
                 <img class="goods__image" src="img/item-1.jpg" width="360" alt="Любительская селфи-палка">
                 <h4 class="goods__caption">Любительская селфи-палка</h4>
-                <span class="goods__span">500 руб.</span>
+                <span class="goods__price">500 руб.</span>
                 <div class="goods__hover">
-                  <a class="goods__link-incart button" href="">В корзину</a>
-                  <a class="goods__link-compare" href="">Добавить к сравнению</a>
+                  <a class="goods__link-incart button" href="#">В корзину</a>
+                  <a class="goods__link-compare" href="#">Добавить к сравнению</a>
                 </div>
               </li>
-              <li>
+              <li class="goods__item">
                 <img class="goods__image" src="img/item-2.jpg" width="360" alt="Профессиональная селфи-палка">
                 <h4 class="goods__caption">Профессиональная селфи-палка</h4>
-                <span class="goods__span">1500 руб.</span>
+                <span class="goods__price">1500 руб.</span>
                 <div class="goods__hover">
                   <a class="goods__link-incart button" href="">В корзину</a>
                   <a class="goods__link-compare" href="">Добавить к сравнению</a>
                 </div>
               </li>
-              <li>
+              <li class="goods__item">
                 <img class="goods__image" src="img/item-3.jpg" width="360" alt="Непотопляемая селфи-палка">
                 <h4 class="goods__caption">Непотопляемая селфи-палка</h4>
-                <span class="goods__span">2500 руб.</span>
+                <span class="goods__price">2500 руб.</span>
                 <div class="goods__hover">
                   <a class="goods__link-incart button" href="">В корзину</a>
                   <a class="goods__link-compare" href="">Добавить к сравнению</a>
                 </div>
               </li>
-              <li>
+              <li class="goods__item">
                 <img class="goods__image" src="img/item-4.jpg" width="360" alt="Селфи-палка &#8222Следуй за мной&#8220">
                 <h4 class="goods__caption">Селфи-палка "Следуй за мной"</h4>
-                <span class="goods__span">4900 руб.</span>
+                <span class="goods__price">4900 руб.</span>
                 <div class="goods__hover">
                   <a class="goods__link-incart button" href="">В корзину</a>
                   <a class="goods__link-compare" href="">Добавить к сравнению</a>
@@ -196,22 +210,19 @@
           </div>
           <ul class="goods__pager pager">
             <li class="pager__item">
-              <span>Назад</span>
+              <a href="#" class="pager__link">Назад</a>
             </li>
             <li class="pager__item pager__item--current">
-              <span>1</span>
+              <a class="pager__page-link" href="#">1</a>
             </li>
             <li class="pager__item">
-              <a href="" aria-label="На страницу номер 2">2</a>
+              <a class="pager__page-link" href="#" aria-label="На страницу номер 2">2</a>
             </li>
             <li class="pager__item">
-              <a href="" aria-label="На страницу номер 3">3</a>
+              <a class="pager__page-link" href="#" aria-label="На страницу номер 3">3</a>
             </li>
             <li class="pager__item">
-              <a href="" aria-label="На страницу номер 4">4</a>
-            </li>
-            <li class="pager__item">
-              <a href="" aria-label="На следующую страницу">Вперед</a>
+              <a class="pager__link" href="#" aria-label="На следующую страницу">Вперед</a>
             </li>
           </ul>
         </div>
@@ -220,16 +231,25 @@
     <footer class="page-footer">
       <img class="page-footer__logo logo" src="img/logo-footer.png" width="164" height="36" alt="Логотип фирмы Device">
       <ul class="page-footer__user-nav footer-user-nav">
-        <li class="footer-user-nav__item">
-          <a class="footer-user-nav__link" href="">Войти</a>
-        </li>
-        <li class="footer-user-nav__item">
-          <a class="footer-user-nav__link" href="">Сравнить</a>
-        </li>
-        <li class="footer-user-nav__item">
-          <a class="footer-user-nav__link" href="">Корзина</a>
-        </li>
-      </ul>
+          <li class="footer-user-nav__item">
+            <a class="footer-user-nav__link" href="">
+              <svg class="footer-user-nav__icon" xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><path fill="#ffc600" d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 0 0 1.687-2.972 3.485 3.485 0 0 0-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z"/></svg>
+              <span>Войти</span>
+            </a>
+          </li>
+          <li class="footer-user-nav__item">
+            <a class="footer-user-nav__link" href="">
+              <svg class="footer-user-nav__icon" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><path fill="#ffc600" d="M8 2h1.984v8H8zM0 3h1.984v7H0zM4 0h2v10H4z"/></svg>
+              <span>Сравнить</span>
+            </a>
+          </li>
+          <li class="footer-user-nav__item">
+            <a class="footer-user-nav__link" href="">
+              <svg class="footer-user-nav__icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path fill="#ffc600" d="M11.864 3.017a.429.429 0 0 0-.327-.154H9.225V4.09c0 .563-.484 1.022-1.08 1.022-.594 0-1.078-.458-1.078-1.022V2.863H4.909V4.09c0 .563-.485 1.022-1.08 1.022-.595 0-1.078-.458-1.078-1.022V2.863H.438a.43.43 0 0 0-.327.154.472.472 0 0 0-.108.358l.776 7.134c.015.806.642 1.455 1.411 1.455h7.595c.77 0 1.396-.649 1.411-1.455l.776-7.134a.476.476 0 0 0-.108-.358z"/><path fill="#ffc600" d="M3.829 4.499c.239 0 .433-.184.433-.409V1.84c0-.632.672-1.022 1.295-1.022h1.079c.655 0 1.078.401 1.078 1.022v2.25c0 .225.194.409.431.409.239 0 .433-.184.433-.409V1.84C8.577.773 7.761 0 6.636 0H5.557c-1.19 0-2.159.826-2.159 1.84v2.25c0 .225.194.409.431.409z"/></svg>
+              <span>Корзина</span>
+            </a>
+          </li>
+        </ul>
       <p class="page-footer__info">г. Москва, ул. Строителей, 15</p>
       <ul class="page-footer__nav footer-site-nav">
         <li class="footer-site-nav__item">

@@ -32,7 +32,7 @@ a {
   vertical-align: middle;
   text-transform: uppercase;
 
-  background: linear-gradient(to bottom, white 40%, #f0c52e 40%, #f0c52e 60%, white 60%);
+  background: linear-gradient(to bottom, transparent 40%, #f0c52e 40%, #f0c52e 60%, transparent 60%);
   border: none;
 
   outline: 0;
@@ -52,18 +52,21 @@ a {
   display: none;
 }
 .conditions__selector:active:before {
-  display: block;
   position: absolute;
+  z-index: 1;
+
+  display: block;
   top: 0;
   right: -118px;
   width: 118px;
   height: 40px;
+
   background-color: black;
-  z-index: 1;
 }
 .conditions__selector:active {
-  background-color: black;
   color: #f0c52e;
+
+  background-color: black;
 }
 .conditions__selector,
 .contacts__button,
@@ -95,27 +98,34 @@ a {
 }
 
 /*Форма поиска*/
-.page-header__search {
 
-}
 .page-header__input {
-  background-color: #f7e296;
-  border: none;
-  color: #000000;
+  width: 356px;
+  height: 45px;
+  padding-left: 30px;
+
   font-size: 15px;
   font-family: 'Open Sans';
   line-height: 30px;
+  color: #000000;
 
-  width: 356px;
-  height: 45px;
+  background-color: #f7e296;
+  border: none;
   outline: 0;
 }
 .page-header__input:focus {
   box-shadow: 0px 2px 0px 0px rgba(0,0,0,1);
 }
+.page-header__icon {
+  position: absolute;
+
+  top: 0px;
+  left: 2px;
+}
+
 .page-header__input::placeholder {
-  color: #c4b376;
   font-family: 'Open Sans';
+  color: #c4b376;
 }
 .page-header__input:hover::placeholder {
   color: #887c50;
@@ -123,37 +133,54 @@ a {
 .page-header__input:focus::placeholder {
   opacity: 0;
 }
+.page-header__label {
+  position: relative;
+}
 .page-header__search-button {
-  display: none;
   position: absolute;
+
+  display: none;
   width: 85px;
   height: 49px;
-  border: 2px solid black;
-  background: none;
 
   font-size: 15px;
   font-family: 'Open Sans';
   line-height: 30px;
+
+  border: 2px solid black;
+  background: none;
 }
-.page-header__input:focus + .page-header__search-button {
+.page-header__label:focus-within .page-header__search-button {
   display: inline-block;
+  right: -85px;
 }
 .page-header__search-button:hover {
   color: white;
+
   background-color: black;
 }
 .page-header__search-button:active {
   color: #747474;
 }
 /*Тексты*/
-.info__text,
+.slider__text,
 .conditions__text,
-.slider__text {
+.contacts__text,
+.info__text,
+.page-footer__info {
   font-family: 'Open Sans';
   font-size: 15px;
   font-weight: 300;
   line-height: 30px;
+}
+.slider__text,
+.conditions__text,
+.info__text,
+.contacts__text {
   color: #464646;
+}
+.page-footer__info {
+  color: white;
 }
 /*Хедер*/
 .page-header {
@@ -180,10 +207,18 @@ a {
 .user-nav,
 .site-list,
 .drop-down-catalog__list{
-  list-style: none;
   padding-left: 0;
+
+  list-style: none;
 }
+.site-list__icon {
+  /*Есть ли простой способ сделать так, что бы opacity не наследовалась от site-list__link?
+  Можно ли просто вынести иконку за пределы ссылки или она тоже должна быть ссылкой?*/
+}
+.page-header__logo-link:hover,
 .user-nav__link:hover,
+.user-nav__link:hover .user-nav__icon,
+.footer-user-nav__link:hover .footer-user-nav__icon,
 .site-list__link:hover,
 .drop-down-catalog__link:hover,
 .footer-user-nav__link:hover,
@@ -191,7 +226,9 @@ a {
 .social__image:hover {
   opacity: 0.6;
 }
+.page-header__logo-link:focus,
 .user-nav__link:focus,
+.user-nav__link:focus .user-nav__icon,
 .site-list__link:focus,
 .drop-down-catalog__link:focus,
 .footer-user-nav__link:focus,
@@ -199,7 +236,9 @@ a {
 .social__link:focus .social__image {
   opacity: 0.6;
 }
+.page-header__logo-link:active,
 .user-nav__link:active,
+.user-nav__link:active .user-nav__icon,
 .site-list__link:active,
 .drop-down-catalog__link:active,
 .footer-user-nav__link:active,
@@ -213,30 +252,21 @@ a {
 .drop-down-catalog {
   position: relative;
 }
-.drop-down-catalog:before {
-  content: "";
-  position: absolute;
-  right: -30px;
-  top: 2px;
-  display: block;
-  background-image: url("/img/plus.svg");
-  background-color: #f7e296;
-  background-repeat: no-repeat;
-  width: 16px;
-  height: 16px;
-  opacity: 0.3;/*Уточнить прозрачность и позиционирование*/
-}
 .drop-down-catalog__list {
-  display: none;
   position: absolute;
+
+  display: none;
 }
 .site-list__wrapper:hover .drop-down-catalog__list {
   display: block;
-  background-color: #f7e296;
   width: 100%;
+
+  background-color: #f7e296;
 }
 /*Слайдер*/
 .slider__switches {
+  padding-left: 0;
+
   list-style: none;
 }
 .slider__button {
@@ -251,6 +281,7 @@ a {
   font-size: 179px;
   line-height: 179px;
   color: white;
+
   background-color:bisque; /*Временно*/
 }
 .feature-table {
@@ -279,12 +310,13 @@ a {
   color: black;
 }
 .popular__image-wrapper {
-  background-color: #f7e296;
-  width: 160px;
-  height: 160px;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 160px;
+  height: 160px;
+
+  background-color: #f7e296;
 }
 .popular__block-wrapper {
   width: 160px;
@@ -315,8 +347,9 @@ a {
 }
 /*О компании и бренды*/
 .brands-list {
-  list-style: none;
   padding-left: 0;
+
+  list-style: none;
 }
 .brands-list__item {
   position: relative;
@@ -329,6 +362,7 @@ a {
 }
 .brands-list__item:hover .brands-list__image-color {
   display: block;
+
   position: absolute;
   top: 0;
 }
@@ -344,32 +378,17 @@ a {
   font-size: 16px;
   line-height: 40px;
 }
+/*Судя по макету нужно применить тут svg-иконку "slider-button", но я не понял как её видоизменить чтобы она стала похожей на ту, что в макете и сделал кружок сам.*/
 .info__delivery-item::before {
   content: "";
   position: absolute;
   left: -35px;
-  top: 15px;
-  width: 4px;
-  height: 4px;
-  border: 3px solid #e6e6e6;
+  top: 17px;
+  width: 3px;
+  height: 3px;
+
+  border: 2px solid #e6e6e6;
   border-radius: 50%;
-}
-/*Футер*/
-.page-footer {
-  background-color: #464646;
-}
-.footer-user-nav,
-.footer-site-nav,
-.social {
-  list-style: none;
-  padding-left: 0;
-}
-.footer-user-nav__link,
-.footer-site-nav__link {
-  color: white;
-}
-.social__link:active {
-  opacity: 0.1;
 }
 /*Всплывающие окна*/
 .modal-write-us__input,
@@ -392,16 +411,15 @@ a {
   font-size: 14px;
   line-height: 18px;
   font-weight: 400; /*Не понятно какой font-weight*/
-  opacity: 0.4;
   color: black;
+
+  opacity: 0.4;
 }
 .modal-write-us__close-button,
 .modal-map__close-button {
   border: none;
-  border-radius: 50%;
-  width: 55px;
-  height: 55px;
-  background-color: #f0c52e;
+  background: none;
+  outline: 0;
   opacity: 0.5;
 }
 .modal-write-us__close-button:hover,
@@ -417,10 +435,7 @@ a {
 .modal-map__close-button:active {
   opacity: 0.3;
 }
-.modal-write-us__icon,
-.modal-map__icon {
-  fill: white;
-}
+
 /*Каталог*/
 .catalog__caption {
   font-size: 47px;
@@ -432,15 +447,24 @@ a {
 }
 .breadcrumbs__item {
   display: inline-block;
+
   font-family: 'Open Sans';
   font-size: 14px;
   line-height: 24px;
   font-weight: 300;
+
   opacity: 0.3;
   color: black;
 }
+.breadcrumbs__link:hover {
+  opacity: 0.6;
+}
+.breadcrumbs__link:active {
+  opacity: 0.1;
+}
 .breadcrumbs__link {
   position: relative;
+
   color: black;
 }
 .breadcrumbs__icon {
@@ -456,25 +480,30 @@ a {
 }
 .filter__checkbox {
   position: absolute;
+
   opacity: 0;
   cursor: pointer;
 }
 .filter__label {
   position: relative;
+
+  padding-left: 35px; /*Временно*/
+
   font-family: 'Open Sans';
   font-size: 14px;
   line-height: 40px;
   font-weight: 300;
-  padding-left: 35px; /*Временно*/
 }
 .filter__label::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-  background: url("../img/checkbox-off.svg") no-repeat;
+
   width: 30px;
   height: 30px;
+
+  background: url("../img/checkbox-off.svg") no-repeat;
 }
 .filter__checkbox:checked + .filter__label::before {
   background: url("../img/checkbox-on.svg") no-repeat;
@@ -493,19 +522,23 @@ a {
 .filter__label-radio {
   position: relative;
   font-family: 'Open Sans';
+
+  padding-left: 35px; /*Временно*/
+
   font-size: 14px;
   line-height: 40px;
   font-weight: 300;
-  padding-left: 35px; /*Временно*/
 }
 .filter__label-radio::before {
   content: "";
   position: absolute;
   top: -2px;
   left: 0;
-  background: url("../img/radio-off.svg") no-repeat;
+
   width: 30px;
   height: 30px;
+
+  background: url("../img/radio-off.svg") no-repeat;
 }
 .filter__radio:checked + .filter__label-radio::before {
   background: url("../img/radio-on.svg") no-repeat;
@@ -513,9 +546,135 @@ a {
 .filter__label:hover::before {
   opacity: 0.6;
 }
+/*Соритровка*/
+.sorting {
+  padding-left: 0;
 
+  list-style: none;
+}
+.sorting__link {
+  font-family: 'Open Sans';
+  font-size: 14px;
+  line-height: 18px;
+  color: black;
+}
+.sorting__link:hover,
+.sorting__link:focus{
+  opacity: 0.6;
+}
+.sorting__link:active {
+  opacity: 0.3;
+}
+.arrows {
+  list-style: none;
+  padding-left: 0;
+}
+.arrows__link {
+  opacity: 0.3;
+}
+.arrows__link:hover,
+.arrows__link:focus {
+  opacity: 0.6;
+}
+.arrows__link:active {
+  opacity: 1;
+}
+/*Сетка товаров*/
+.goods__list {
+  padding-left: 0;
 
+  list-style: none;
+}
+.goods__caption {
+  letter-spacing: inherit;
+  text-transform: none;
+}
+.goods__price {
+  font-family: 'Open Sans';
+  font-size: 16px;
+  color: #464646;
+}
+.goods__item {
+  position: relative;
 
+  width: 360px;
+  height: 500px; /*Изображение товара + описание*/
+}
+.goods__hover {
+  position: absolute;
+  top:0;
+  left: 0;
+
+  display: none;
+  width: 360px;
+  height: 380px;
+
+  cursor: pointer;
+}
+.goods__item:hover .goods__hover {
+  display: block;
+}
+.goods__link-compare {
+  color: black;
+  opacity: 0.5;
+}
+.goods__link-compare:hover,
+.goods__link-compare:focus {
+  opacity: 1;
+}
+.goods__link-compare:active {
+  opacity: 0.2;
+}
+/*Пейджер*/
+/*Точно не знаю как его оформить, пока сделал так*/
+.pager {
+  padding-left: 0;
+
+  font-size: 16px;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  list-style: none;
+
+  background-color: #ebebeb;
+}
+.pager__link,
+.pager__page-link{
+  color: black;
+}
+.pager__item:hover:first-child,
+.pager__item:hover:last-child {
+  background-color: #d9d9d9;
+}
+.pager__item:active:first-child .pager__link,
+.pager__item:active:last-child .pager__link {
+  opacity: 0.3;
+}
+.pager__page-link {
+  opacity: 0.3;
+}
+.pager__page-link:hover {
+  opacity: 0.6
+}
+.pager__page-link:active {
+  opacity: 1;
+}
+/*Футер*/
+.page-footer {
+  background-color: #464646;
+}
+.footer-user-nav,
+.footer-site-nav,
+.social {
+  list-style: none;
+  padding-left: 0;
+}
+.footer-user-nav__link,
+.footer-site-nav__link {
+  color: white;
+}
+.social__link:active {
+  opacity: 0.1;
+}
 /*Служебные классы*/
 .visually-hidden {
   position: absolute;
@@ -524,6 +683,3 @@ a {
   height: 1px;
   margin: -1px;
 }
-
-
-
