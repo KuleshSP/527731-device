@@ -28,6 +28,14 @@
                   <span class="user-nav__span">Войти</span>
                 </a>
               </li>
+              <li class="user-nav__item visually-hidden">
+                <a class="user-nav__link" href="">
+                  <svg class="user-nav__icon" xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><path d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 0 0 1.687-2.972 3.485 3.485 0 0 0-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z"/></svg>
+                  <span class="user-nav__span">
+                    <span class="user-nav__username">Валентин Петухов</span>
+                  </span>
+                </a>
+              </li>
               <li class="user-nav__item">
                 <a class="user-nav__link" href="">
                   <svg class="user-nav__icon" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><path d="M8 2h1.984v8H8zM0 3h1.984v7H0zM4 0h2v10H4z"/></svg>
@@ -44,7 +52,7 @@
           </div>
           <div class="main-nav__wrapper site-list">
             <div class="site-list__catalog-wrapper">
-              <a class="site-list__link" href="">
+              <a class="site-list__link" href="catalog.html">
                 <span class="site-list__span">Каталог товаров</span>
                 <svg class="site-list__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="#b8a974" d="M16 7H9V0H7v7H0v2h7v7h2V9h7z"/></svg>
               </a>
@@ -86,23 +94,14 @@
     <main class="page-main">
       <h1 class="visually-hidden">Девайс</h1>
       <section class="slider container">
-        <ul class="slider__switches">
-          <li class="slider__radio">
-            <button class="slider__button slider__button--active" type="button" aria-label="Товар №1">
-              <svg class="slider__icon-active" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 23 23"><path d="M11.5 2c5.238 0 9.5 4.262 9.5 9.5S16.738 21 11.5 21 2 16.738 2 11.5 6.262 2 11.5 2m0-2C5.149 0 0 5.149 0 11.5 0 17.852 5.149 23 11.5 23 17.852 23 23 17.852 23 11.5 23 5.149 17.852 0 11.5 0z"/><path d="M11.5 9.004a2.5 2.5 0 0 1 2.496 2.496 2.5 2.5 0 0 1-2.496 2.496A2.5 2.5 0 0 1 9.004 11.5 2.5 2.5 0 0 1 11.5 9.004m0-2a4.496 4.496 0 1 0 0 8.992 4.496 4.496 0 0 0 0-8.992z"/></svg>
-            </button>
-          </li>
-          <li class="slider__radio">
-            <button class="slider__button" type="button" aria-label="Товар №2">
-              <svg class="slider__icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 23 23"><path d="M11.5 2c5.238 0 9.5 4.262 9.5 9.5S16.738 21 11.5 21 2 16.738 2 11.5 6.262 2 11.5 2m0-2C5.149 0 0 5.149 0 11.5 0 17.852 5.149 23 11.5 23 17.852 23 23 17.852 23 11.5 23 5.149 17.852 0 11.5 0z"/></svg>
-            </button>
-          </li>
-          <li class="slider__radio">
-            <button class="slider__button" type="button" aria-label="Товар №3">
-              <svg class="slider__icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 23 23"><path d="M11.5 2c5.238 0 9.5 4.262 9.5 9.5S16.738 21 11.5 21 2 16.738 2 11.5 6.262 2 11.5 2m0-2C5.149 0 0 5.149 0 11.5 0 17.852 5.149 23 11.5 23 17.852 23 23 17.852 23 11.5 23 5.149 17.852 0 11.5 0z"/></svg>
-            </button>
-          </li>
-        </ul>
+        <input class="slider__input--1 visually-hidden" type="radio" id="product-1" name="toggle" checked>
+        <input class="slider__input--2 visually-hidden" type="radio" id="product-2" name="toggle">
+        <input class="slider__input--3 visually-hidden" type="radio" id="product-3" name="toggle">
+        <div class="slider__controls">
+          <label class="slider-controls-item slider-controls-item--1" for="product-1">Первый</label>
+          <label class="slider-controls-item slider-controls-item--2" for="product-2">Второй</label>
+          <label class="slider-controls-item slider-controls-item--3" for="product-3">Третий</label>
+        </div>
         <div class="slider__slides">
           <div class="slider__wrapper">
             <div class="slider__image-wrapper">
@@ -127,8 +126,10 @@
               </table>
             </div>
           </div>
-          <div class="slider__wrapper visually-hidden">
-            <img class="slider_image" src="img/slider-2.png" width="345" height="485" alt="Фитнес-треккер">
+          <div class="slider__wrapper">
+            <div class="slider__image-wrapper">
+              <img class="slider_image" src="img/slider-2.png" width="345" height="485" alt="Фитнес-треккер">
+            </div>
             <div class="slider__right-side-wrapper">
               <h2 class="slider__caption">Худеем<br> правильно!</h2>
               <span class="slider__number">02</span>
@@ -144,8 +145,10 @@
               </table>
             </div>
           </div>
-          <div class="slider__wrapper visually-hidden">
-            <img class="slider_image" src="img/slider-3.png" width="526" height="334" alt="Квадрокоптеры">
+          <div class="slider__wrapper">
+            <div class="slider__image-wrapper">
+              <img class="slider_image" src="img/slider-3.png" width="526" height="334" alt="Квадрокоптеры">
+            </div>
             <div class="slider__right-side-wrapper">
               <h2 class="slider__caption">Порхает как бабочка, <br> жалит как пчела!</h2>
               <span class="slider__number">03</span>
@@ -233,40 +236,41 @@
       <section class="conditions">
         <div class="conditions__wrapper container">
           <h2 class="visually-hidden">Условия, доставка и гарантии</h2>
+          <input class="conditions__input--1 visually-hidden" type="radio" id="condition-1" name="condition-toggle" checked>
+          <input class="conditions__input--2 visually-hidden" type="radio" id="condition-2" name="condition-toggle">
+          <input class="conditions__input--3 visually-hidden" type="radio" id="condition-3" name="condition-toggle">
           <div class="conditions__controls">
-            <button class="conditions__selector button" type="button">Доставка</button>
-            <button class="conditions__selector button" type="button">Гарантия</button>
-            <button class="conditions__selector button" type="button">Кредит</button>
+            <label class="conditions__selector button" type="button" for="condition-1">Доставка</label>
+            <label class="conditions__selector button" type="button" for="condition-2">Гарантия</label>
+            <label class="conditions__selector button" type="button" for="condition-3">Кредит</label>
           </div>
-          <div class="conditions__tabs-box tabs">
-            <div class="conditions__list">
-              <div class="conditions__item">
-                <div class="conditions__item-wrapper">
-                  <h2 class="conditions__caption">Доставка</h2>
-                  <p class="conditions__text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-                </div>
-                <div class="conditions__image-wrapper">
-                  <img class="conditions__image" src="img/delivery.svg" width="136" height="164" alt="Человек с посылкой">
-                </div>
+          <div class="conditions__list">
+            <div class="conditions__item">
+              <div class="conditions__item-wrapper">
+                <h2 class="conditions__caption">Доставка</h2>
+                <p class="conditions__text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
               </div>
-              <div class="conditions__item conditions__item--hidden">
-                <div class="conditions__item-wrapper">
-                  <h2 class="conditions__caption">Гарантия</h2>
-                  <p class="conditions__text">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
-                </div>
-                <div class="conditions__image-wrapper">
-                  <img class="conditions__image" src="img/warranty.svg" alt="Гарантия" width="136" height="164">
-                </div>
+              <div class="conditions__image-wrapper">
+                <img class="conditions__image" src="img/delivery.svg" width="136" height="164" alt="Человек с посылкой">
               </div>
-              <div class="conditions__item conditions__item--hidden">
-                <div class="conditions__item-wrapper">
-                  <h2 class="conditions__caption">Кредит</h2>
-                  <p class="conditions__text">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные
-                  условия кредита. Выгодные для нашего банка, разумеется.</p>
-                </div>
-                <div class="conditions__image-wrapper">
-                  <img class="conditions__image" src="img/credit.svg" alt="Человек с кредитной картой" width="136" height="164">
-                </div>
+            </div>
+            <div class="conditions__item">
+              <div class="conditions__item-wrapper">
+                <h2 class="conditions__caption">Гарантия</h2>
+                <p class="conditions__text">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+              </div>
+              <div class="conditions__image-wrapper">
+                <img class="conditions__image" src="img/warranty.svg" alt="Гарантия" width="136" height="164">
+              </div>
+            </div>
+            <div class="conditions__item">
+              <div class="conditions__item-wrapper">
+                <h2 class="conditions__caption">Кредит</h2>
+                <p class="conditions__text">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные
+                условия кредита. Выгодные для нашего банка, разумеется.</p>
+              </div>
+              <div class="conditions__image-wrapper">
+                <img class="conditions__image" src="img/credit.svg" alt="Человек с кредитной картой" width="136" height="164">
               </div>
             </div>
           </div>
@@ -325,6 +329,15 @@
                   <svg class="footer-user-nav__icon" xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><path fill="#ffc600" d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 0 0 1.687-2.972 3.485 3.485 0 0 0-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z"/></svg>
                   <span class="footer-user-nav__span">Войти</span>
                 </a>
+              </li>
+              <li class="footer-user-nav__item visually-hidden">
+                <a class="footer-user-nav__link" href="">
+                  <svg class="footer-user-nav__icon" xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><path fill="#ffc600" d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 0 0 1.687-2.972 3.485 3.485 0 0 0-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z"/></svg>
+                  <span class="footer-user-nav__span">
+                    <span class="footer-user-nav__username">Валентин Петухов</span>
+                  </span>
+                </a>
+                <a class="footer-user-nav__log-out" href="">Выйти</a>
               </li>
               <li class="footer-user-nav__item">
                 <a class="footer-user-nav__link" href="">
@@ -387,7 +400,7 @@
       <form class="modal-write-us__form" action="https://echo.htmlacademy.ru" method="post">
         <p class="modal-write-us__item">
           <label class="modal-write-us__label" for="modal-write-us-name">Ваше имя:</label>
-          <input class="modal-write-us__input" type="text" id="modal-write-us-name" placeholder="Имя Фамилия">
+          <input class="modal-write-us__input" type="text" pattern="^[A-Za-zА-Яа-яЁё\s]+$" id="modal-write-us-name" placeholder="Имя Фамилия">
         </p>
         <p class="modal-write-us__item">
           <label class="modal-write-us__label" for="modal-write-us-email">Ваш e-mail:</label>

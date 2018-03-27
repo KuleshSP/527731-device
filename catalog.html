@@ -9,7 +9,9 @@
   <body>
     <header class="page-header container">
       <div class="page-header__wrapper">
-        <img class="page-header__logo logo" src="img/logo.png" width="164" height="36" alt="Логотип компании Device">
+        <a href="index.html">
+          <img class="page-header__logo logo" src="img/logo.png" width="164" height="36" alt="Логотип компании Device">
+        </a>
         <nav class="main-nav">
           <div class="main-nav__wrapper">
             <div class="main-nav__search">
@@ -22,11 +24,20 @@
               </form>
             </div>
             <ul class="main-nav__user-nav user-nav">
-              <li class="user-nav__item">
+              <li class="user-nav__item visually-hidden">
                 <a class="user-nav__link" href="">
                   <svg class="user-nav__icon" xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><path d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 0 0 1.687-2.972 3.485 3.485 0 0 0-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z"/></svg>
                   <span class="user-nav__span">Войти</span>
                 </a>
+              </li>
+              <li class="user-nav__item">
+                <a class="user-nav__link" href="">
+                  <svg class="user-nav__icon" xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><path d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 0 0 1.687-2.972 3.485 3.485 0 0 0-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z"/></svg>
+                  <span class="user-nav__span">
+                    <span class="user-nav__username">Валентин Петухов</span>
+                  </span>
+                </a>
+                <a class="user-nav__log-out" href="">Выйти</a>
               </li>
               <li class="user-nav__item">
                 <a class="user-nav__link" href="">
@@ -98,7 +109,7 @@
                 <a class="breadcrumbs__link" href="#">Каталог товаров</a>
                 <svg xmlns="http://www.w3.org/2000/svg" width="4" height="7" viewBox="0 0 4 7"><path class="breadcrumbs__icon" d="M3.83 3.132L.861.144a.5.5 0 0 0-.713 0 .508.508 0 0 0 0 .718l2.611 2.629L.148 6.12a.51.51 0 0 0 0 .72.5.5 0 0 0 .713 0L3.83 3.852a.51.51 0 0 0 .147-.36.507.507 0 0 0-.147-.36z"/></svg>
               </li>
-              <li class="breadcrumbs__item">Моноподы для селфи</li>
+              <li class="breadcrumbs__item"><span class="breadcrumbs__span">Моноподы для селфи</span></li>
             </ul>
           </div>
         </div>
@@ -171,7 +182,7 @@
                     <span class="sorting__caption">Сортировка:</span>
                   </li>
                   <li class="sorting__item">
-                    <a class="sorting__link" href="#" aria-label="Сортировка">По цене</a>
+                    <a class="sorting__link sorting__link--active" href="#" aria-label="Сортировка">По цене</a>
                   </li>
                   <li class="sorting__item">
                     <a class="sorting__link" href="#" aria-label="Сортировка">По типу</a>
@@ -234,7 +245,7 @@
                       <div class="goods__new">New</div>
                     </div>
                     <div class="goods__description">
-                      <h4 class="goods__caption">Селфи-палка "Следуй за мной"</h4>
+                      <h4 class="goods__caption">Селфи-палка &laquo;Следуй за мной&raquo;</h4>
                       <span class="goods__price">4 900 руб.</span>
                     </div>
                     <div class="goods__hover">
@@ -273,11 +284,20 @@
         <div class="page-footer__top">
           <img class="page-footer__logo logo" src="img/logo-footer.png" width="164" height="36" alt="Логотип фирмы Device">
           <ul class="page-footer__user-nav footer-user-nav">
-              <li class="footer-user-nav__item">
+              <li class="footer-user-nav__item visually-hidden">
                 <a class="footer-user-nav__link" href="">
                   <svg class="footer-user-nav__icon" xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><path fill="#ffc600" d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 0 0 1.687-2.972 3.485 3.485 0 0 0-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z"/></svg>
                   <span class="footer-user-nav__span">Войти</span>
                 </a>
+              </li>
+              <li class="footer-user-nav__item">
+                <a class="footer-user-nav__link" href="">
+                  <svg class="footer-user-nav__icon" xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><path fill="#ffc600" d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 0 0 1.687-2.972 3.485 3.485 0 0 0-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z"/></svg>
+                  <span class="footer-user-nav__span">
+                    <span class="footer-user-nav__username">Валентин Петухов</span>
+                  </span>
+                </a>
+                <a class="footer-user-nav__log-out" href="">Выйти</a>
               </li>
               <li class="footer-user-nav__item">
                 <a class="footer-user-nav__link" href="">
