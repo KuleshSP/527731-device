@@ -236,16 +236,16 @@
       <section class="conditions">
         <div class="conditions__wrapper container">
           <h2 class="visually-hidden">Условия, доставка и гарантии</h2>
-          <input class="conditions__input--1 visually-hidden" type="radio" id="condition-1" name="condition-toggle" checked>
-          <input class="conditions__input--2 visually-hidden" type="radio" id="condition-2" name="condition-toggle">
-          <input class="conditions__input--3 visually-hidden" type="radio" id="condition-3" name="condition-toggle">
+          <input class="conditions__input--delivery visually-hidden" type="radio" id="condition-1" name="condition-toggle" checked>
+          <input class="conditions__input--warranty visually-hidden" type="radio" id="condition-2" name="condition-toggle">
+          <input class="conditions__input--credit visually-hidden" type="radio" id="condition-3" name="condition-toggle">
           <div class="conditions__controls">
-            <label class="conditions__selector button" type="button" for="condition-1">Доставка</label>
-            <label class="conditions__selector button" type="button" for="condition-2">Гарантия</label>
-            <label class="conditions__selector button" type="button" for="condition-3">Кредит</label>
+            <label class="conditions__selector conditions__selector--delivery button" type="button" for="condition-1">Доставка</label>
+            <label class="conditions__selector conditions__selector--warranty button" type="button" for="condition-2">Гарантия</label>
+            <label class="conditions__selector conditions__selector--credit button" type="button" for="condition-3">Кредит</label>
           </div>
           <div class="conditions__list">
-            <div class="conditions__item">
+            <div class="conditions__item conditions__item--delivery">
               <div class="conditions__item-wrapper">
                 <h2 class="conditions__caption">Доставка</h2>
                 <p class="conditions__text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
@@ -254,7 +254,7 @@
                 <img class="conditions__image" src="img/delivery.svg" width="136" height="164" alt="Человек с посылкой">
               </div>
             </div>
-            <div class="conditions__item">
+            <div class="conditions__item conditions__item--warranty">
               <div class="conditions__item-wrapper">
                 <h2 class="conditions__caption">Гарантия</h2>
                 <p class="conditions__text">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
@@ -263,7 +263,7 @@
                 <img class="conditions__image" src="img/warranty.svg" alt="Гарантия" width="136" height="164">
               </div>
             </div>
-            <div class="conditions__item">
+            <div class="conditions__item conditions__item--credit">
               <div class="conditions__item-wrapper">
                 <h2 class="conditions__caption">Кредит</h2>
                 <p class="conditions__text">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные
