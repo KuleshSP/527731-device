@@ -418,7 +418,9 @@ a {
   border-radius: 50%;
   box-shadow: 0 0 0 1px;
 }
-.slider-controls-item::before {
+.slider-controls-item--selfie-stick::before,
+.slider-controls-item--fitness-tracker::before,
+.slider-controls-item--quadrocopter::before {
   content: "";
   position: absolute;
   top: 3px;
@@ -433,14 +435,14 @@ a {
 .slider-controls-item:last-child {
   margin-right: 0;
 }
-.slider__input--1:checked ~ .slider__slides .slider__wrapper:nth-of-type(1),
-.slider__input--2:checked ~ .slider__slides .slider__wrapper:nth-of-type(2),
-.slider__input--3:checked ~ .slider__slides .slider__wrapper:nth-of-type(3) {
+.slider__input--selfie-stick:checked ~ .slider__slides .slider__wrapper--selfie-stick,
+.slider__input--fitness-tracker:checked ~ .slider__slides .slider__wrapper--fitness-tracker,
+.slider__input--quadrocopter:checked ~ .slider__slides .slider__wrapper--quadrocopter {
   display: flex;
 }
-.slider__input--1:checked ~ .slider__controls .slider-controls-item:nth-child(1)::before,
-.slider__input--2:checked ~ .slider__controls .slider-controls-item:nth-child(2)::before,
-.slider__input--3:checked ~ .slider__controls .slider-controls-item:nth-child(3)::before {
+.slider__input--selfie-stick:checked ~ .slider__controls .slider-controls-item--selfie-stick::before,
+.slider__input--fitness-tracker:checked ~ .slider__controls .slider-controls-item--fitness-tracker::before,
+.slider__input--quadrocopter:checked ~ .slider__controls .slider-controls-item--quadrocopter::before {
   display: block;
 }
 
