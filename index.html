@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -400,27 +401,59 @@
       <form class="modal-write-us__form" action="https://echo.htmlacademy.ru" method="post">
         <p class="modal-write-us__item">
           <label class="modal-write-us__label" for="modal-write-us-name">Ваше имя:</label>
-          <input class="modal-write-us__input" type="text" pattern="^[A-Za-zА-Яа-яЁё\s]+$" id="modal-write-us-name" placeholder="Имя Фамилия">
+          <input class="modal-write-us__input" type="text" pattern="^[A-Za-zА-Яа-яЁё\s]+$" id="modal-write-us-name" name="name-surname" placeholder="Имя Фамилия">
         </p>
         <p class="modal-write-us__item">
           <label class="modal-write-us__label" for="modal-write-us-email">Ваш e-mail:</label>
-          <input class="modal-write-us__input" type="email" id="modal-write-us-email" placeholder="email@example.com">
+          <input class="modal-write-us__input" type="email" id="modal-write-us-email" name="email" placeholder="email@example.com">
         </p>
         <p class="modal-write-us__item">
           <label class="modal-write-us__label" for="modal-write-us-textarea">Текст письма</label>
-          <textarea class="modal-write-us__textarea" name="" id="modal-write-us-textarea" cols="50" rows="10" placeholder="В свободной форме"></textarea>
+          <textarea class="modal-write-us__textarea" name="review" id="modal-write-us-textarea" cols="50" rows="10" placeholder="В свободной форме"></textarea>
         </p>
         <button class="modal-write-us__button button" type="submit">Отправить</button>
       </form>
-      <button class="modal-write-us__close-button" type="button" aria-label="Закрыть окно">
-        <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55"><path class="modal-write-us__icon" fill="#F0C52E" d="M27.5 0C12.312 0 0 12.312 0 27.5S12.312 55 27.5 55 55 42.688 55 27.5 42.688 0 27.5 0zm11.476 37.072l-1.486 1.426-9.99-9.574-9.987 9.574-1.488-1.426 9.988-9.573-9.987-9.573 1.487-1.425 9.987 9.573 9.988-9.573 1.487 1.425-9.989 9.574 9.99 9.572z"/></svg>
+      <button class="modal-close modal-close--write-us" type="button" aria-label="Закрыть окно">
+        <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55"><path class="modal-close__icon" fill="#F0C52E" d="M27.5 0C12.312 0 0 12.312 0 27.5S12.312 55 27.5 55 55 42.688 55 27.5 42.688 0 27.5 0zm11.476 37.072l-1.486 1.426-9.99-9.574-9.987 9.574-1.488-1.426 9.988-9.573-9.987-9.573 1.487-1.425 9.987 9.573 9.988-9.573 1.487 1.425-9.989 9.574 9.99 9.572z"/></svg>
       </button>
     </section>
     <section class="modal modal-map">
-      <img class="modal-map__image" src="img/map-big.png" width="960" height="559" alt="г. Москва, ул. Строителей, 15">
-      <button class="modal-map__close-button" type="button" aria-label="Закрыть окно">
-        <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55"><path class="modal-map__icon" fill="#F0C52E" d="M27.5 0C12.312 0 0 12.312 0 27.5S12.312 55 27.5 55 55 42.688 55 27.5 42.688 0 27.5 0zm11.476 37.072l-1.486 1.426-9.99-9.574-9.987 9.574-1.488-1.426 9.988-9.573-9.987-9.573 1.487-1.425 9.987 9.573 9.988-9.573 1.487 1.425-9.989 9.574 9.99 9.572z"/></svg>
+      <a href="https://yandex.ru/maps/?um=constructor%3A9205a8efe3e899c74678f7535380b3ae0971633a1e24e56829e7bd11bfd9023c&source=constructorLink">
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A9205a8efe3e899c74678f7535380b3ae0971633a1e24e56829e7bd11bfd9023c&amp;width=960&amp;height=559&amp;lang=ru_RU&amp;scroll=true"></script>
+      </a>
+      <button class="modal-close modal-close--map" type="button" aria-label="Закрыть окно">
+        <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55"><path class="modal-close__icon" fill="#F0C52E" d="M27.5 0C12.312 0 0 12.312 0 27.5S12.312 55 27.5 55 55 42.688 55 27.5 42.688 0 27.5 0zm11.476 37.072l-1.486 1.426-9.99-9.574-9.987 9.574-1.488-1.426 9.988-9.573-9.987-9.573 1.487-1.425 9.987 9.573 9.988-9.573 1.487 1.425-9.989 9.574 9.99 9.572z"/></svg>
       </button>
     </section>
+    <script>
+      var btnContact = document.querySelector(".contacts__button");
+      var popupWriteUs = document.querySelector(".modal-write-us");
+      var closeBtnWriteUs = document.querySelector(".modal-close--write-us");
+
+      btnContact.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        popupWriteUs.classList.add("modal-show");
+      });
+
+      closeBtnWriteUs.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        popupWriteUs.classList.remove("modal-show");
+      });
+
+      var btnMap = document.querySelector(".contacts__image");
+      var popupMap = document.querySelector(".modal-map");
+      var closeBtnMap = document.querySelector(".modal-close--map");
+
+      btnMap.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        popupMap.classList.add("modal-show");
+      });
+
+      closeBtnMap.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        popupMap.classList.remove("modal-show");
+      });
+    </script>
+
   </body>
 </html>
