@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -16,16 +17,18 @@
           <div class="main-nav__wrapper">
             <div class="main-nav__search">
               <form class="main-nav__form" action="https://echo.htmlacademy.ru" method="post" id="search-form">
-                <label class="main-nav__label" for="search">
-                  <svg class="main-nav__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M15.7 14.3l-3.104-3.104A6.979 6.979 0 0 0 14 7a7 7 0 1 0-7 7 6.963 6.963 0 0 0 4.193-1.404L14.3 15.7c.185.184.38.3.7.3a1 1 0 0 0 1-1 .93.93 0 0 0-.3-.7zM2 7c0-2.762 2.238-5 5-5s5 2.238 5 5-2.238 5-5 5-5-2.238-5-5z"/></svg>
+                <div class="main-nav__search-wrapper">
+                  <label class="main-nav__label" for="search">
+                    <svg class="main-nav__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M15.7 14.3l-3.104-3.104A6.979 6.979 0 0 0 14 7a7 7 0 1 0-7 7 6.963 6.963 0 0 0 4.193-1.404L14.3 15.7c.185.184.38.3.7.3a1 1 0 0 0 1-1 .93.93 0 0 0-.3-.7zM2 7c0-2.762 2.238-5 5-5s5 2.238 5 5-2.238 5-5 5-5-2.238-5-5z"/></svg>
+                    <input class="main-nav__input" name="search" id="search" type="text" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
+                  </label>
                   <button class="main-nav__search-button" type="submit" form="search-form">Найти</button>
-                  <input class="main-nav__input" name="search" id="search" type="text" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
-                </label>
+                </div>
               </form>
             </div>
             <ul class="main-nav__user-nav user-nav">
               <li class="user-nav__item visually-hidden">
-                <a class="user-nav__link" href="">
+                <a class="user-nav__link" href="" tabindex="-1">
                   <svg class="user-nav__icon" xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><path d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 0 0 1.687-2.972 3.485 3.485 0 0 0-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z"/></svg>
                   <span class="user-nav__span">Войти</span>
                 </a>
@@ -206,7 +209,7 @@
               </div>
               <div class="goods__wrapper">
                 <ul class="goods__list">
-                  <li class="goods__item">
+                  <li class="goods__item" tabindex="0">
                     <img class="goods__image" src="img/item-1.jpg" width="360" alt="Любительская селфи-палка">
                     <div class="goods__description">
                       <h4 class="goods__caption">Любительская селфи-палка</h4>
@@ -217,7 +220,7 @@
                       <a class="goods__link-compare" href="#">Добавить к сравнению</a>
                     </div>
                   </li>
-                  <li class="goods__item">
+                  <li class="goods__item" tabindex="0">
                     <img class="goods__image" src="img/item-2.jpg" width="360" alt="Профессиональная селфи-палка">
                     <div class="goods__description">
                       <h4 class="goods__caption">Профессиональная<br> селфи-палка</h4>
@@ -228,7 +231,7 @@
                       <a class="goods__link-compare" href="">Добавить к сравнению</a>
                     </div>
                   </li>
-                  <li class="goods__item">
+                  <li class="goods__item" tabindex="0">
                     <img class="goods__image" src="img/item-3.jpg" width="360" alt="Непотопляемая селфи-палка">
                     <div class="goods__description">
                       <h4 class="goods__caption">Непотопляемая селфи-палка</h4>
@@ -239,8 +242,8 @@
                       <a class="goods__link-compare" href="">Добавить к сравнению</a>
                     </div>
                   </li>
-                  <li class="goods__item">
-                    <img class="goods__image" src="img/item-4.jpg" width="360" alt="Селфи-палка &#8222Следуй за мной&#8220">
+                  <li class="goods__item" tabindex="0">
+                    <img class="goods__image" src="img/item-4.jpg" width="360" alt="Селфи-палка &#8222;Следуй за мной&#8220;">
                     <div class="goods__new-border">
                       <div class="goods__new">New</div>
                     </div>
@@ -282,10 +285,12 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper container">
         <div class="page-footer__top">
-          <img class="page-footer__logo logo" src="img/logo-footer.png" width="164" height="36" alt="Логотип фирмы Device">
+          <a href="index.html">
+            <img class="page-footer__logo logo" src="img/logo-footer.png" width="164" height="36" alt="Логотип фирмы Device">
+          </a>
           <ul class="page-footer__user-nav footer-user-nav">
               <li class="footer-user-nav__item visually-hidden">
-                <a class="footer-user-nav__link" href="">
+                <a class="footer-user-nav__link" href="" tabindex="-1">
                   <svg class="footer-user-nav__icon" xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><path fill="#ffc600" d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 0 0 1.687-2.972 3.485 3.485 0 0 0-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z"/></svg>
                   <span class="footer-user-nav__span">Войти</span>
                 </a>

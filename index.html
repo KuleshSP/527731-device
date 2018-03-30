@@ -15,11 +15,13 @@
           <div class="main-nav__wrapper">
             <div class="main-nav__search">
               <form class="main-nav__form" action="https://echo.htmlacademy.ru" method="post" id="search-form">
-                <label class="main-nav__label" for="search">
-                  <svg class="main-nav__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M15.7 14.3l-3.104-3.104A6.979 6.979 0 0 0 14 7a7 7 0 1 0-7 7 6.963 6.963 0 0 0 4.193-1.404L14.3 15.7c.185.184.38.3.7.3a1 1 0 0 0 1-1 .93.93 0 0 0-.3-.7zM2 7c0-2.762 2.238-5 5-5s5 2.238 5 5-2.238 5-5 5-5-2.238-5-5z"/></svg>
+                <div class="main-nav__search-wrapper">
+                  <label class="main-nav__label" for="search">
+                    <svg class="main-nav__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M15.7 14.3l-3.104-3.104A6.979 6.979 0 0 0 14 7a7 7 0 1 0-7 7 6.963 6.963 0 0 0 4.193-1.404L14.3 15.7c.185.184.38.3.7.3a1 1 0 0 0 1-1 .93.93 0 0 0-.3-.7zM2 7c0-2.762 2.238-5 5-5s5 2.238 5 5-2.238 5-5 5-5-2.238-5-5z"/></svg>
+                    <input class="main-nav__input" name="search" id="search" type="text" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
+                  </label>
                   <button class="main-nav__search-button" type="submit" form="search-form">Найти</button>
-                  <input class="main-nav__input" name="search" id="search" type="text" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
-                </label>
+                </div>
               </form>
             </div>
             <ul class="main-nav__user-nav user-nav">
@@ -30,12 +32,13 @@
                 </a>
               </li>
               <li class="user-nav__item visually-hidden">
-                <a class="user-nav__link" href="">
+                <a class="user-nav__link" href="" tabindex="-1">
                   <svg class="user-nav__icon" xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><path d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 0 0 1.687-2.972 3.485 3.485 0 0 0-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z"/></svg>
                   <span class="user-nav__span">
                     <span class="user-nav__username">Валентин Петухов</span>
                   </span>
                 </a>
+                <a class="footer-user-nav__log-out" href="" tabindex="-1">Выйти</a>
               </li>
               <li class="user-nav__item">
                 <a class="user-nav__link" href="">
@@ -95,9 +98,9 @@
     <main class="page-main">
       <h1 class="visually-hidden">Девайс</h1>
       <section class="slider container">
-        <input class="slider__input--selfie-stick visually-hidden" type="radio" id="product-1" name="toggle" checked>
-        <input class="slider__input--fitness-tracker visually-hidden" type="radio" id="product-2" name="toggle">
-        <input class="slider__input--quadrocopter visually-hidden" type="radio" id="product-3" name="toggle">
+        <input class="slider__input slider__input--selfie-stick visually-hidden" type="radio" id="product-1" name="toggle" checked>
+        <input class="slider__input slider__input--fitness-tracker visually-hidden" type="radio" id="product-2" name="toggle">
+        <input class="slider__input slider__input--quadrocopter visually-hidden" type="radio" id="product-3" name="toggle">
         <div class="slider__controls">
           <label class="slider-controls-item slider-controls-item--selfie-stick" for="product-1">Первый</label>
           <label class="slider-controls-item slider-controls-item--fitness-tracker" for="product-2">Второй</label>
@@ -184,52 +187,42 @@
           </li>
           <li class="popular__item">
             <a class="popular__link" href="#">
-              <div class="popular__block-wrapper">
-                <div class="popular__image-wrapper">
-                  <img class="popular__image" src="img/popular-2.svg" width="86" height="117" alt="Моноподы для селфи">
-                </div>
+              <div class="popular__image-wrapper">
+                <img class="popular__image" src="img/popular-2.svg" width="86" height="117" alt="Моноподы для селфи">
+              </div>
               <h3 class="popular__caption">Моноподы<br> для селфи</h3>
-            </div>
             </a>
           </li>
           <li class="popular__item">
             <a class="popular__link" href="#">
-              <div class="popular__block-wrapper">
-                <div class="popular__image-wrapper">
-                  <img class="popular__image" src="img/popular-3.svg" width="71" height="87" alt="Экшн-камеры">
-                </div>
-                <h3 class="popular__caption">Экшн-камеры</h3>
+              <div class="popular__image-wrapper">
+                <img class="popular__image" src="img/popular-3.svg" width="71" height="87" alt="Экшн-камеры">
               </div>
+              <h3 class="popular__caption">Экшн-камеры</h3>
             </a>
           </li>
           <li class="popular__item">
             <a class="popular__link" href="#">
-              <div class="popular__block-wrapper">
-                <div class="popular__image-wrapper">
-                  <img class="popular__image" src="img/popular-4.svg" width="107" height="65" alt="Фитнес-браслеты">
-                </div>
-                <h3 class="popular__caption">Фитнес-браслеты</h3>
+              <div class="popular__image-wrapper">
+                <img class="popular__image" src="img/popular-4.svg" width="107" height="65" alt="Фитнес-браслеты">
               </div>
+              <h3 class="popular__caption">Фитнес-браслеты</h3>
             </a>
           </li>
           <li class="popular__item">
             <a class="popular__link" href="#">
-              <div class="popular__block-wrapper">
-                <div class="popular__image-wrapper">
-                  <img class="popular__image" src="img/popular-5.svg" width="56" height="98" alt="Умные часы">
-                </div>
-                <h3 class="popular__caption">Умные часы</h3>
+              <div class="popular__image-wrapper">
+                <img class="popular__image" src="img/popular-5.svg" width="56" height="98" alt="Умные часы">
               </div>
+              <h3 class="popular__caption">Умные часы</h3>
             </a>
           </li>
           <li class="popular__item">
             <a class="popular__link" href="#">
-              <div class="popular__block-wrapper">
-                <div class="popular__image-wrapper">
-                  <img class="popular__image" src="img/popular-6.svg" width="132" height="69" alt="Квадрокоптеры">
-                </div>
-                <h3 class="popular__caption">Квадрокоптеры</h3>
+              <div class="popular__image-wrapper">
+                <img class="popular__image" src="img/popular-6.svg" width="132" height="69" alt="Квадрокоптеры">
               </div>
+              <h3 class="popular__caption">Квадрокоптеры</h3>
             </a>
           </li>
         </ul>
@@ -241,9 +234,9 @@
           <input class="conditions__input--warranty visually-hidden" type="radio" id="condition-2" name="condition-toggle">
           <input class="conditions__input--credit visually-hidden" type="radio" id="condition-3" name="condition-toggle">
           <div class="conditions__controls">
-            <label class="conditions__selector conditions__selector--delivery button" type="button" for="condition-1">Доставка</label>
-            <label class="conditions__selector conditions__selector--warranty button" type="button" for="condition-2">Гарантия</label>
-            <label class="conditions__selector conditions__selector--credit button" type="button" for="condition-3">Кредит</label>
+            <label class="conditions__selector conditions__selector--delivery button" for="condition-1">Доставка</label>
+            <label class="conditions__selector conditions__selector--warranty button" for="condition-2">Гарантия</label>
+            <label class="conditions__selector conditions__selector--credit button" for="condition-3">Кредит</label>
           </div>
           <div class="conditions__list">
             <div class="conditions__item conditions__item--delivery">
@@ -261,7 +254,7 @@
                 <p class="conditions__text">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
               </div>
               <div class="conditions__image-wrapper">
-                <img class="conditions__image" src="img/warranty.svg" alt="Гарантия" width="136" height="164">
+                <img class="conditions__image" src="img/warranty.svg" width="171" height="195" alt="Гарантия">
               </div>
             </div>
             <div class="conditions__item conditions__item--credit">
@@ -271,7 +264,7 @@
                 условия кредита. Выгодные для нашего банка, разумеется.</p>
               </div>
               <div class="conditions__image-wrapper">
-                <img class="conditions__image" src="img/credit.svg" alt="Человек с кредитной картой" width="136" height="164">
+                <img class="conditions__image" src="img/credit.svg" width="156" height="188" alt="Человек с кредитной картой">
               </div>
             </div>
           </div>
@@ -332,13 +325,13 @@
                 </a>
               </li>
               <li class="footer-user-nav__item visually-hidden">
-                <a class="footer-user-nav__link" href="">
+                <a class="footer-user-nav__link" href="" tabindex="-1">
                   <svg class="footer-user-nav__icon" xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><path fill="#ffc600" d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 0 0 1.687-2.972 3.485 3.485 0 0 0-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z"/></svg>
                   <span class="footer-user-nav__span">
                     <span class="footer-user-nav__username">Валентин Петухов</span>
                   </span>
                 </a>
-                <a class="footer-user-nav__log-out" href="">Выйти</a>
+                <a class="footer-user-nav__log-out" href="" tabindex="-1">Выйти</a>
               </li>
               <li class="footer-user-nav__item">
                 <a class="footer-user-nav__link" href="">
@@ -418,42 +411,11 @@
       </button>
     </section>
     <section class="modal modal-map">
-      <a href="https://yandex.ru/maps/?um=constructor%3A9205a8efe3e899c74678f7535380b3ae0971633a1e24e56829e7bd11bfd9023c&source=constructorLink">
-        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A9205a8efe3e899c74678f7535380b3ae0971633a1e24e56829e7bd11bfd9023c&amp;width=960&amp;height=559&amp;lang=ru_RU&amp;scroll=true"></script>
-      </a>
+      <iframe class="modal-map__interactive-map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A5975201f679a90c6339ec03c4a66a23daa3183892da553110bd71dd81806910f&amp;source=constructor" width="960" height="559"></iframe>
       <button class="modal-close modal-close--map" type="button" aria-label="Закрыть окно">
         <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55"><path class="modal-close__icon" fill="#F0C52E" d="M27.5 0C12.312 0 0 12.312 0 27.5S12.312 55 27.5 55 55 42.688 55 27.5 42.688 0 27.5 0zm11.476 37.072l-1.486 1.426-9.99-9.574-9.987 9.574-1.488-1.426 9.988-9.573-9.987-9.573 1.487-1.425 9.987 9.573 9.988-9.573 1.487 1.425-9.989 9.574 9.99 9.572z"/></svg>
       </button>
     </section>
-    <script>
-      var btnContact = document.querySelector(".contacts__button");
-      var popupWriteUs = document.querySelector(".modal-write-us");
-      var closeBtnWriteUs = document.querySelector(".modal-close--write-us");
-
-      btnContact.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        popupWriteUs.classList.add("modal-show");
-      });
-
-      closeBtnWriteUs.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        popupWriteUs.classList.remove("modal-show");
-      });
-
-      var btnMap = document.querySelector(".contacts__image");
-      var popupMap = document.querySelector(".modal-map");
-      var closeBtnMap = document.querySelector(".modal-close--map");
-
-      btnMap.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        popupMap.classList.add("modal-show");
-      });
-
-      closeBtnMap.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        popupMap.classList.remove("modal-show");
-      });
-    </script>
-
+    <script src="js/popups.js"></script>
   </body>
 </html>

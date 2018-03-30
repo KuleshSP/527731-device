@@ -39,8 +39,6 @@ a {
 
   background: linear-gradient(to bottom, transparent 40%, #f0c52e 40%, #f0c52e 60%, transparent 60%);
   border: none;
-
-  outline: 0;
 }
 .button:hover,
 .button:focus {
@@ -85,9 +83,10 @@ a {
 /*Форма поиска*/
 
 .main-nav__input {
-  width: 356px;
+  width: 311px;
   height: 45px;
   padding-left: 40px;
+  margin-right: -4px;
 
   font-size: 15px;
   font-family: 'Open Sans';
@@ -95,11 +94,12 @@ a {
   color: #000000;
 
   background-color: #f7e296;
+
   border: none;
   outline: 0;
 }
 .main-nav__input:focus {
-  box-shadow: 0 2px 0 0 rgba(0,0,0,1);
+  box-shadow: 0 2px 0 0 black;
 }
 .main-nav__icon {
   position: absolute;
@@ -107,26 +107,24 @@ a {
   top: 0;
   left: 2px;
 }
-
 .main-nav__input::placeholder {
   font-family: 'Open Sans';
-  color: #c4b376;
+  color: rgba(0, 0, 0, 0.3);
 }
 .main-nav__input:hover::placeholder {
-  color: #887c50;
+  color: rgba(0, 0, 0, 0.6);
 }
 .main-nav__input:focus::placeholder {
-  opacity: 0;
+  color: rgba(0, 0, 0, 0);
 }
 .main-nav__label {
   position: relative;
 }
 .main-nav__search-button {
-  position: absolute;
-
   display: none;
   width: 85px;
   height: 49px;
+  vertical-align: top;
 
   font-size: 15px;
   font-family: 'Open Sans';
@@ -135,10 +133,8 @@ a {
   border: 2px solid black;
   background: none;
 }
-.main-nav__label:focus-within .main-nav__search-button {
+.main-nav__search-wrapper:focus-within .main-nav__search-button {
   display: inline-block;
-  vertical-align: middle;
-  right: -85px;
 }
 .main-nav__search-button:hover {
   color: white;
@@ -357,12 +353,6 @@ a {
 
   background: linear-gradient(to bottom, #f7e296 131px, white 131px, white 100%);
 }
-.
-.slider__right-side-wrapper {
-  position: relative;
-
-  width: 510px;
-}
 .slider__caption {
   position: relative;
   z-index: 1;
@@ -435,6 +425,7 @@ a {
   display: none;
   width: 3px;
   height: 3px;
+
   border: 1px solid black;
   border-radius: 50%;
 }
@@ -451,7 +442,11 @@ a {
 .slider__input--quadrocopter:checked ~ .slider__controls .slider-controls-item--quadrocopter::before {
   display: block;
 }
-
+.slider__input--selfie-stick:focus ~ .slider__controls .slider-controls-item--selfie-stick,
+.slider__input--fitness-tracker:focus ~ .slider__controls .slider-controls-item--fitness-tracker,
+.slider__input--quadrocopter:focus ~ .slider__controls .slider-controls-item--quadrocopter {
+  outline: auto 5px -webkit-focus-ring-color;
+}
 .slider__button {
   border: none;
   background: none;
@@ -505,6 +500,9 @@ a {
   padding-left: 0;
 }
 .popular__link {
+  display: block;
+  width: 160px;
+
   color: black;
 }
 .popular__image-wrapper {
@@ -516,18 +514,14 @@ a {
 
   margin-bottom: 33px;
 
-  background-color: #f7e296;
+  background-color: rgba(240, 197, 46, 0.5);
 }
-.popular__block-wrapper {
-  width: 160px;
+.popular__link:hover .popular__image-wrapper,
+.popular__link:focus .popular__image-wrapper {
+  background-color: rgba(240, 197, 46, 1);
 }
-.popular__block-wrapper:hover .popular__image-wrapper {
-  background-color: #f0c52e;
-}
-.popular__block-wrapper:active .popular__image {
-  opacity: 0.3;
-}
-.popular__block-wrapper:active .popular__caption {
+.popular__link:active .popular__image,
+.popular__link:active .popular__caption {
   opacity: 0.3;
 }
 .popular__item:nth-child(2) .popular__image {
@@ -577,14 +571,14 @@ a {
   justify-content: space-between;
   width: 760px;
 
-  margin-top: 46px;
+  margin-top: 33px;
 }
 .conditions__caption {
+  margin-bottom: 32px;
+
   font-size: 47px;
-  line-height: auto;
-}
-.conditions__caption {
-  margin-bottom: 44px;
+  line-height: 48px;
+  letter-spacing: 0.02em;
 }
 .conditions__text {
   width: 460px;
@@ -625,13 +619,18 @@ a {
 .conditions__input--credit:checked ~ .conditions__list .conditions__item--credit {
   display: flex;
 }
+.conditions__input--delivery:focus ~ .conditions__controls .conditions__selector--delivery,
+.conditions__input--warranty:focus ~ .conditions__controls .conditions__selector--warranty,
+.conditions__input--credit:focus ~ .conditions__controls .conditions__selector--credit {
+  outline: auto 5px -webkit-focus-ring-color;
+}
 /*О компании и бренды*/
 .brands-list {
   display: flex;
   justify-content: space-between;
 
   padding-left: 0;
-  margin-bottom: 49px;
+  margin-bottom: 47px;
 
   list-style: none;
 }
@@ -653,7 +652,7 @@ a {
 .company__info-wrapper {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 81px;
+  padding-bottom: 82px;
 }
 .info,
 .contacts {
@@ -797,7 +796,9 @@ a {
   font-weight: 400; /*Не понятно какой font-weight*/
   color: rgba(0,0,0, 0.4);
 }
-
+.modal-map__interactive-map {
+  border-width: 0;
+}
 .modal-map {
   margin: 0 auto;
   padding: 0;
@@ -835,10 +836,41 @@ a {
 .modal-close:active .modal-close__icon {
   fill: rgba(240, 197, 46, 0.3);
 }
-.modal-show {
-  display: block;
+@keyframes bounce {
+  0% {
+    transform: translateX(-50%) translateY(-2000px);
+  }
+  70% {
+    transform: translateX(-50%) translateY(-50%);
+  }
+  90% {
+    transform: translateX(-50%) translateY(-45%);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%);
+  }
 }
 
+.modal-show {
+  display: block;
+  animation-name: bounce;
+  animation-duration: 0.6s;
+}
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(-50%) translateY(-50%);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-51%) translateY(-50%);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(-49%) translateY(-50%);
+  }
+}
+.modal-error {
+  animation-name: shake;
+  animation-duration: 0.6s;
+}
 /*Каталог*/
 .catalog__background-wrapper {
   margin: 0 auto;
@@ -981,6 +1013,9 @@ a {
 .filter__label:hover::before {
   opacity: 0.6;
 }
+.filter__checkbox:focus + .filter__label::before {
+  opacity: 0.6;
+}
 .filter__label:disabled::before {
   opacity: 0.25;
 }
@@ -1013,8 +1048,15 @@ a {
 .filter__radio:checked + .filter__label-radio::before {
   background: url("../img/radio-on.svg") no-repeat;
 }
-.filter__label:hover::before {
+.filter__label-radio:hover::before {
   opacity: 0.6;
+}
+.filter__radio:focus + .filter__label-radio::before {
+  opacity: 0.6;
+}
+.filter__radio:disabled + .filter__label-radio,
+.filter__checkbox:disabled + .filter__label {
+  opacity: 0.25;
 }
 
 /*Фильтр по цене*/
@@ -1206,6 +1248,9 @@ a {
   width: 360px;
   height: 475px;
 }
+.goods__image {
+  background-color: #efefef;
+}
 .goods__item:nth-child(2n) {
   margin-right: 0;
 }
@@ -1225,15 +1270,16 @@ a {
 
   cursor: pointer;
 }
-.goods__item:hover .goods__hover {
+.goods__item:hover .goods__hover,
+.goods__item:focus-within .goods__hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.goods__item:hover .goods__image {
-  filter:grayscale(1); /* Не понял какой тут фильтр должен быть, нужна помощь*/
-  opacity: 0.7;
+.goods__item:hover .goods__image,
+.goods__item:focus-within .goods__image{
+  filter:grayscale(1);
 }
 .goods__link-compare {
   font-family: 'Open Sans';
@@ -1364,7 +1410,7 @@ a {
 .footer-user-nav__log-out {
   font-family: 'Open Sans';
   font-size: 15px;
-  line-height: 30px;
+  line-height: 15px;
   font-weight: 300;
   color: white;
   opacity: 0.3;
@@ -1429,9 +1475,16 @@ a {
   height: 7px;
   background-color: #ffc600;
 }
-.copyright__image {
+.copyright__link {
   margin-top: 3px;
   margin-left: 50px;
+}
+.copyright__image:hover,
+.copyright__image:focus {
+  opacity: 0.6;
+}
+.copyright__image:active {
+  opacity: 0.3;
 }
 /*Служебные классы*/
 .visually-hidden {
