@@ -1247,9 +1247,11 @@ a {
 
   width: 360px;
   height: 475px;
+
+  background: linear-gradient(to bottom, #eeeeee 380px, white 380px, white 100%);
 }
 .goods__image {
-  background-color: #efefef;
+
 }
 .goods__item:nth-child(2n) {
   margin-right: 0;
@@ -1280,6 +1282,7 @@ a {
 .goods__item:hover .goods__image,
 .goods__item:focus-within .goods__image{
   filter:grayscale(1);
+  opacity: 0.5;
 }
 .goods__link-compare {
   font-family: 'Open Sans';
