@@ -1,21 +1,24 @@
 @font-face {
-  font-family: 'Gilroyextrabold';
-  src: url('gilroyextrabold.woff2');
-  src: local('Gilroy');
+    font-family: 'gilroyextrabold';
+    src: url('../gilroyextrabold.woff2') format('woff2'),
+         url('../gilroyextrabold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 @font-face {
-  font-family: 'Gilroylight';
-  src: url('gilroylight.woff2');
-  src: local('Gilroy');
+    font-family: 'gilroylight';
+    src: url('../gilroylight.woff2') format('woff2'),
+         url('../gilroylight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 body {
   margin: 0;
   padding: 0;
 
-  font-family: "Gilroy", Arial, sans-serif;
+  font-family: 'gilroyextrabold', 'Arial', sans-serif;
   font-size: 18px;
   line-height: 24px;
-  font-weight: 800;
   color: #000000;
   letter-spacing: 0.01em;
 
@@ -227,6 +230,14 @@ a {
 .page-header__logo {
   margin-top: -21px;
 }
+.page-header__logo-link:hover,
+.page-footer__logo-link:hover {
+  opacity: 0.6;
+}
+.page-header__logo-link:active,
+.page-footer__logo-link:active{
+  opacity: 0.3;
+}
 .page-header a {
   color: #000000;
 }
@@ -361,7 +372,7 @@ a {
 
   font-size: 47px;
   line-height: 56px;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
 }
 .slider__caption::before {
   content: "";
@@ -461,12 +472,12 @@ a {
   color: white;
 }
 .feature-table {
+  font-family: 'gilroylight';
   font-size: 36px;
 
   border-collapse: collapse;
 }
 .feature-table__row:first-child {
-  font-weight: 300;
   line-height: 48px;
 }
 .feature-table__row:last-child {
@@ -793,7 +804,7 @@ a {
   font-family: 'Open Sans';
   font-size: 14px;
   line-height: 18px;
-  font-weight: 400; /*Не понятно какой font-weight*/
+  font-weight: 400;
   color: rgba(0,0,0, 0.4);
 }
 .modal-map__interactive-map {
@@ -1081,9 +1092,9 @@ a {
   position: absolute;
   bottom: -37px;
 
+  font-family: 'gilroylight';
   font-size: 14px;
   line-height: 24px;
-  font-weight: 300;
   color: rgba(0, 0, 0, 0.2)
 }
 .min-price {
@@ -1156,16 +1167,18 @@ a {
 }
 .sorting__item:first-child {
   margin-right: 55px;
-  margin-left: 0;
+  margin-left: 3px;
 }
 .sorting__item:last-child {
   margin-right: 0;
 }
 .sorting__link {
   font-family: 'Open Sans';
+  font-weight: normal;
   font-size: 14px;
   line-height: 18px;
   color: rgba(0,0,0, 0.3);
+  letter-spacing: 0;
 }
 .sorting__link--active {
   color: rgba(0,0,0, 1)
@@ -1214,7 +1227,6 @@ a {
   line-height: 24px;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  font-weight: 800;
 }
 /*Сетка товаров*/
 .goods__list {
@@ -1229,15 +1241,14 @@ a {
 
   font-size: 18px;
   line-height: 24px;
-  font-weight: 800;
   letter-spacing: 0.01em;
   text-transform: none;
 }
 .goods__price {
-  font-family: 'Gilroy';
+  font-family: 'gilroylight';
   font-size: 16px;
   line-height: 24px;
-  font-weight: 300;
+
   color: #464646;
 }
 .goods__item {
@@ -1310,9 +1321,7 @@ a {
   width: 55px;
   height: 55px;
 
-  font-family: 'Gilroy';
   font-size: 14px;
-  font-weight: 800;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: black;
@@ -1332,7 +1341,6 @@ a {
   width: 760px;
 
   font-size: 16px;
-  font-weight: 800;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   list-style: none;
@@ -1398,8 +1406,10 @@ a {
   margin-left: 0;
 }
 .page-footer__info {
-  line-height: 30px;
   margin-top: 13px;
+
+  line-height: 30px;
+  letter-spacing: 0em;
 }
 .footer-user-nav__item:nth-child(2) {
   margin-right: 2px;
